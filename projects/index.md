@@ -8,7 +8,7 @@ permalink: /projects/
 
 ### Current Projects
 
-I'm currently working on [LOOT](https://loot.github.io) v0.7, and occasionally contributing to [Wrye Bash](https://github.com/wrye-bash/wrye-bash)'s development.
+I'm currently working on [LOOT](https://loot.github.io) v0.7 and the Royal Deeside Railway Preservation Society's [website](http://rdrps.org.uk), and occasionally contributing to [Wrye Bash](https://github.com/wrye-bash/wrye-bash)'s development.
 
 ### Miscellaneous
 
