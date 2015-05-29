@@ -5,7 +5,7 @@ date:   2015-01-11
 summary: "Cutting out an SVG icon using a home-made CNC router."
 ---
 
-My brother and my dad spent some of their free time last year putting together a [CNC router](https://en.wikipedia.org/wiki/CNC_router), and they finally got it working over the Christmas holidays. When I was asked to help convert some bitmap images into SVGs so that they could be cut out, I had the idea of cutting out LOOT's logo, which I'd recently redesigned and redrawn as an SVG. My dad and I got it done late last night / early this morning, so I thought I'd post something to explain what we did and show off [some pictures](https://plus.google.com/photos/104661746805670028939/albums/6103164247153437969)!
+My brother and my dad spent some of their free time last year putting together a [CNC router](https://en.wikipedia.org/wiki/CNC_router), and they finally got it working over the Christmas holidays. When I was asked to help convert some bitmap images into SVGs so that they could be cut out, I had the idea of cutting out LOOT's logo, which I'd recently redesigned and redrawn as an SVG. My dad and I got it done late last night / early this morning, so I thought I'd post something to explain what we did and show off [some pictures](https://goo.gl/photos/YtfvqB4oBiHsQmE5A)!
 
 As a very brief overview, the CNC router is a drill mounted above a cutting table that can be moved along the x, y and z axes. It's controlled via a parallel printer port and some circuitry by an old desktop computer running [LinuxCNC 2.6](http://www.linuxcnc.org/). It's like a 3D printer, but it cuts shapes out of various materials instead of pasting them together (although I think ours could also do rudimentary 3D printing if we had a hot plate).
 
