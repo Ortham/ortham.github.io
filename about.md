@@ -19,7 +19,7 @@ small.portrait {
 }
 </style>
 
-<img class="portrait" alt="my avatar" src="/images/portrait.png">
+<img class="portrait" alt="my avatar" src="/images/me.png">
 <small class="portrait">Please don't try this at home.</small>
 
 I like to solve problems with code. Most of my published code is written in C++, but I like JavaScript and Python too. I'm a big fan of HTML5-based user interfaces.
