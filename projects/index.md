@@ -8,7 +8,7 @@ permalink: /projects/
 
 ### Current Projects
 
-I'm currently working on [LOOT](https://loot.github.io) v0.7 and the Royal Deeside Railway Preservation Society's [website](http://rdrps.org.uk), and contributing pull requests to [Polymer](https://www.polymer-project.org/0.5/) and [yaml-cpp](https://github.com/jbeder/yaml-cpp).
+I'm currently working on [LOOT](https://loot.github.io) and the Royal Deeside Railway Preservation Society's [website](http://rdrps.org.uk), and contributing to [yaml-cpp](https://github.com/jbeder/yaml-cpp).
 
 ### Miscellaneous
 
