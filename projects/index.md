@@ -14,6 +14,10 @@ I'm currently working on [LOOT](https://loot.github.io) and the Royal Deeside Ra
 
 Here are a few things I wrote because I needed them, and shared because other people may need them too.
 
+#### [Pseudosem](https://github.com/WrinklyNinja/pseudosem)
+
+A C++11 header-only library for comparison of version strings, following the [Semantic Versioning](http://semver.org) specification and featuring support for a wider variety of version syntaxes.
+
 #### [Jed Gettext Parser](https://github.com/WrinklyNinja/jed-gettext-parser)
 
 A Javascript Gettext MO file parser that outputs [Jed](https://slexaxton.github.io/Jed/)-compatible data, and which can be run in browser and Node environments.
