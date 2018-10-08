@@ -74,6 +74,8 @@ defaults:
 
 # minimal-mistakes
 minimal_mistakes_skin: dark
+head_scripts:
+  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
 footer:
   links:
     - label: Donate
