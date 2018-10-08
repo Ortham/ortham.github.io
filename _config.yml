@@ -41,6 +41,8 @@ plugins:
   # GitHub Pages: Optional
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-mentions
+  - jemoji
 
 # GitHub Pages: Hardcoded settings
 lsi: false
