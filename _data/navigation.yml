@@ -1,0 +1,9 @@
+---
+
+main:
+  - title: My Projects
+    url: /projects/
+  - title: Archive
+    url: /archive/
+  - title: About
+    url: /about/
