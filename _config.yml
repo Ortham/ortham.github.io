@@ -60,6 +60,17 @@ paginate: 10 # amount of posts to show
 
 # minimal-mistakes
 minimal_mistakes_skin: dark
+footer:
+  links:
+    - label: Donate
+      icon: fab fa-fw fa-paypal
+      url: https://www.paypal.me/OliverHamlet
+    - label: GitHub
+      icon: fab fa-fw fa-github
+      url: https://github.com/WrinklyNinja
+    - label: Email
+      icon: fas fa-fw fa-at
+      url: mailto:oliver.hamlet@gmail.com
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
