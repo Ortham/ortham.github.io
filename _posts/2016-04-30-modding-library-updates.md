@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  Modding Library Updates
 date:   2016-04-30
 summary: libbsa, libespm and libloadorder changes & improvements.

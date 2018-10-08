@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "BOSS vs. LOOT In Numbers"
 date:   2015-03-11
 summary: "Analysing the stats, one year on."

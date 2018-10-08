@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "New: Pseudosem"
 date:   2015-08-24
 summary: A library for permissive semantic version comparison in C++11.

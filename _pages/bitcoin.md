@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Bitcoin Donations
 permalink: /bitcoin/
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Physicalising LOOT’s Logo"
 date:   2015-01-11
 summary: "Cutting out an SVG icon using a home-made CNC router."

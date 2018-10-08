@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Improving Donation Visibility"
 date:   2014-09-12 12:00
 summary: "Upcoming changes to raise user awareness."

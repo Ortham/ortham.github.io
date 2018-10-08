@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  BOSS Development Resumed!
 date:   2015-08-23
 summary:  I’ve been replaced, and it’s in good hands.

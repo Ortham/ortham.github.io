@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Donating With Bitcoins"
 date:   2014-09-12 18:40
 update_date: 2014-09-13 06:23

@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Environment Mod List"
 date:   2009-02-26
 summary: "An overview of the available environment mods for TES IV: Oblivion."

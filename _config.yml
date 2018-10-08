@@ -58,6 +58,20 @@ kramdown:
 # Pagination plugin
 paginate: 10 # amount of posts to show
 
+# Front matter defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      read_time: true
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+
 # minimal-mistakes
 minimal_mistakes_skin: dark
 footer:

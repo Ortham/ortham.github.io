@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  Site Updated
 date:   2015-08-23
 summary: Now using Pixyll v2.3.

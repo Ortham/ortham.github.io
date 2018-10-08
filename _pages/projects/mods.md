@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "My Projects: Game Mods & Code"
 permalink: /projects/mods/
 ---
