@@ -7,6 +7,8 @@ categories:
   - modding
   - Oblivion
   - lists
+toc: true
+toc_label: Table of Contents
 ---
 
 ## Introduction
