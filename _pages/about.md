@@ -5,19 +5,6 @@ permalink: /about/
 
 ### Me
 
-<style>
-img.portrait {
-    width: 20rem;
-    margin: 0 auto;
-    display: block;
-}
-small.portrait {
-    margin-top: 0.75em;
-    display: block;
-    text-align: center;
-}
-</style>
-
 <img class="portrait" alt="my avatar" src="/images/me.png">
 <small class="portrait">Please don't try this at home.</small>
 

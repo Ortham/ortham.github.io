@@ -3,55 +3,6 @@ title:  "BOSS vs. LOOT In Numbers"
 date:   2015-03-11
 summary: "Analysing the stats, one year on."
 ---
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.js" charset="utf-8"></script>
-<style>
-.bar {
-  fill: steelblue;
-}
-
-.axis text {
-  font: 0.6em sans-serif;
-}
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.x.axis path {
-  display: none;
-}
-
-.x.axis .tick line {
-    opacity: 0;
-}
-.legend text {
-    fill: white;
-    font: 0.6em sans-serif;
-    text-anchor:left;
-}
-.loot {
-    opacity: 1;
-}
-.boss {
-    opacity: 0.66;
-}
-.boss-previous {
-    opacity: 0.33;
-}
-
-article > table {
-    margin: 1rem;
-}
-article > table th, article > table td {
-    padding: 10px;
-}
-article > table td:not(:first-child) {
-    text-align: center;
-}
-</style>
 
 LOOT's first release, v0.5.0, was made on the 31st of March, 2014. Almost one year on, I thought I'd take a look at some stats to see how it's performing against its predecessor, BOSS.
 
