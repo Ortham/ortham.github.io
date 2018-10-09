@@ -7,11 +7,15 @@ permalink: /projects/
 
 ### Current Projects
 
-I'm currently working on [LOOT](https://loot.github.io) and the Royal Deeside Railway Preservation Society's [website](http://rdrps.org.uk), and contributing to [yaml-cpp](https://github.com/jbeder/yaml-cpp).
+I'm currently working on [LOOT](https://loot.github.io), various related libraries and [Yore](https://github.com/WrinklyNinja/yore).
 
 ### Miscellaneous
 
 Here are a few things I wrote because I needed them, and shared because other people may need them too.
+
+#### [svg_to_ico](https://github.com/WrinklyNinja/svg_to_ico)
+
+As the name suggests, a CLI utility and Rust library for converting an SVG file into an ICO file. I use it to generate icons for LOOT's and Yore's executables.
 
 #### [Pseudosem](https://github.com/WrinklyNinja/pseudosem)
 

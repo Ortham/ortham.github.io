@@ -3,16 +3,14 @@ title: "My Projects: Game Mods & Code"
 permalink: /projects/mods/
 ---
 
-Apparently 10,000 hours will make you an expert at something. In my case, I've just forgotten what I learned at the start. Oh, and created/contributed to everything below. So there's that.
+I've been involved in modding Bethesda's Elder Scrolls and Fallout games since 2007. Thousands of hours later, here's what I've created or contributed to.
 
 ### Modding Utilities
-
-Load order automation is my niche. Can you tell?
 
 #### [LOOT](https://loot.github.io/)
 
 <div class="table-row">
-    <img alt="LOOT icon" src="/images/LOOT.png"><p>A plugin load order optimiser for TES IV: Oblivion, TES V: Skyrim, Fallout 3 and Fallout: New Vegas. The successor to BOSS.</p>
+    <img alt="LOOT icon" src="/images/LOOT.png"><p>A plugin load order optimiser for TES IV: Oblivion, TES V: Skyrim, Fallout 3 and Fallout: New Vegas. The successor to BOSS. The core functionality is available in a C++ library.</p>
 </div>
 
 #### [BOSS](https://boss-developers.github.io/)
@@ -41,17 +39,25 @@ As well as the guides available on this site's blog, I've also written the follo
 
 Collaborative documentation for the Fallout 3 and Fallout: New Vegas plugin file formats. *I'm no longer working on this, but I'll still merge pull requests.*
 
+#### [Buddah](https://github.com/WrinklyNinja/buddah)
+
+A simple registry for community-made game modding software, because I found it discovering it difficult.
+
 #### Wiki Contributions
 
 Over the years, I've made various contributions to UESP.net's [plugin file format information](http://uesp.net/wiki/Tes4Mod:Mod_File_Format), the [Elder Scrolls Construction Set Wiki](http://cs.elderscrolls.com/index.php?title=Main_Page) and the [Creation Kit Wiki](http://www.creationkit.com/).
 
-### C/C++ Libraries
+### Libraries
 
 Libraries with C APIs that can be used by mod utility developers to make their lives easier.
 
+#### [esplugin](http://github.com/WrinklyNinja/esplugin)
+
+Read ESP, ESM and ESL files. A Rust library with a C wrapper, used by LOOT and libloadorder.
+
 #### [libloadorder](http://github.com/WrinklyNinja/libloadorder)
 
-Manipulate the load order and active status of plugins for Morrowind, Oblivion, Skyrim, Fallout 3 and Fallout: New Vegas.
+Manipulate the load order and active status of plugins for Morrowind, Oblivion, Skyrim, Skyrim SE, Skyrim VR, Fallout 3, Fallout: New Vegas, Fallout 4 and Fallout 4 VR. A Rust library with a C wrapper, though it was written in C++ for a long time. Used by LOOT.
 
 #### [libstrings](http://github.com/WrinklyNinja/libstrings)
 
@@ -63,7 +69,7 @@ Read Morrowind, Oblivion, Skyrim, Fallout 3 and Fallout: New Vegas BSA files. *I
 
 #### [libespm](http://github.com/WrinklyNinja/libespm)
 
-A basic header-only library for reading ESP and ESM files. Useful if you don't need to read record data, as it can then be used without zlib. [LOOT](https://loot.github.io/) uses it to read plugins.
+A basic header-only library for reading ESP and ESM files. Superseded by esplugin.
 
 ### Oblivion Mods
 
