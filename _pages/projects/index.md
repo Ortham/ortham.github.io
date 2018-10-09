@@ -28,7 +28,7 @@ A Javascript Gettext MO file parser that outputs [Jed](https://slexaxton.github.
 #### [MARS](http://github.com/WrinklyNinja/mars)
 
 <div class="table-row">
-    <img alt="MARS icon" src="/images/MARS.svg"><p>An interface for the Agilent B2900A Precision SMU that allows the automated testing of devices over time.<br>
+    <img alt="MARS icon" src="/assets/images/MARS.svg"><p>An interface for the Agilent B2900A Precision SMU that allows the automated testing of devices over time.<br>
 
     So named because <a href="https://en.wikipedia.org/wiki/Curiosity_(rover)">Curiosity</a> landed as I wrote it.</p>
 </div>

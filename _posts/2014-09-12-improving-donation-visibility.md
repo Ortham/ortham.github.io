@@ -13,7 +13,7 @@ I don't get a lot of money from people through my existing PayPal donation link 
 
 That said, I don't do a very good job of informing people that the donation option exists: there's a PayPal icon in my site header, and a donate link in my Bethesda Softworks Forums signature. Maybe there are people who would quite like to send me money, but don't know they can.
 
-![shut up and take my money!](/images/posts/Shut-up-and-take-my-money.jpg)
+![shut up and take my money!](/assets/images/posts/Shut-up-and-take-my-money.jpg)
 
 Given the above, I'll be making donation options more prominent. The PayPal link on my site will be shifted over to the right, and I'll add donation info to my [About](/about/) page and the site footer.
 

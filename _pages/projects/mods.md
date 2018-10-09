@@ -10,25 +10,25 @@ I've been involved in modding Bethesda's Elder Scrolls and Fallout games since 2
 #### [LOOT](https://loot.github.io/)
 
 <div class="table-row">
-    <img alt="LOOT icon" src="/images/LOOT.png"><p>A plugin load order optimiser for TES IV: Oblivion, TES V: Skyrim, Fallout 3 and Fallout: New Vegas. The successor to BOSS. The core functionality is available in a C++ library.</p>
+    <img alt="LOOT icon" src="/assets/images/LOOT.png"><p>A plugin load order optimiser for TES IV: Oblivion, TES V: Skyrim, Fallout 3 and Fallout: New Vegas. The successor to BOSS. The core functionality is available in a C++ library.</p>
 </div>
 
 #### [BOSS](https://boss-developers.github.io/)
 
 <div class="table-row">
-    <img alt="BOSS icon" src="/images/BOSS.png"><p>A plugin load order sorting tool for TES IV: Oblivion, Nehrim - At Fate's Edge, TES V: Skyrim, Fallout 3 and Fallout: New Vegas. This was considered an essential tool by the vast majority of mod users, until I wrote LOOT.</p>
+    <img alt="BOSS icon" src="/assets/images/BOSS.png"><p>A plugin load order sorting tool for TES IV: Oblivion, Nehrim - At Fate's Edge, TES V: Skyrim, Fallout 3 and Fallout: New Vegas. This was considered an essential tool by the vast majority of mod users, until I wrote LOOT.</p>
 </div>
 
 #### [StrEdit](http://github.com/WrinklyNinja/stredit)
 
 <div class="table-row">
-    <img alt="StrEdit icon" src="/images/StrEdit.png"><p>A minimalist TES V: Skyrim string table editor designed for mod translators. </p>
+    <img alt="StrEdit icon" src="/assets/images/StrEdit.png"><p>A minimalist TES V: Skyrim string table editor designed for mod translators. </p>
 </div>
 
 #### [Wrye Bash](http://github.com/wrye-bash)
 
 <div class="table-row">
-    <img alt="Wrye Bash icon" src="/images/Bash.svg"><p>A powerful mod management utility for TES IV: Oblivion and TES V: Skyrim.</p>
+    <img alt="Wrye Bash icon" src="/assets/images/Bash.svg"><p>A powerful mod management utility for TES IV: Oblivion and TES V: Skyrim.</p>
 </div>
 
 ### Documentation

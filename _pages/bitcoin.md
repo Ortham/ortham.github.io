@@ -22,7 +22,7 @@ interest to you.
 
 <p class="bitcoin">
     <a href="bitcoin:3PgJ2NmfRdG4qphZjgtHS3sJuNtHEHWHcL?amount=0.02&label=Oliver%20Hamlet">
-        <img src="/images/bitcoinQR.svg">
+        <img src="/assets/images/bitcoinQR.svg">
         3PgJ2NmfRdG4qphZjgtHS3sJuNtHEHWHcL
     </a>
 </p>

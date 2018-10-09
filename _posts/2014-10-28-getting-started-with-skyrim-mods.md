@@ -10,7 +10,7 @@ categories:
 
 ## What Madness Is This?
 
-![Image from the "Craftable Sheogorath Outfit" mod.](/images/posts/sheogorath.jpg)
+![Image from the "Craftable Sheogorath Outfit" mod.](/assets/images/posts/sheogorath.jpg)
 
 I've been around long enough to know that modding Skyrim should be done carefully and patiently, with lots of reading, because it's complicated and can blow up in your face fifteen hours into an epic adventure.
 
@@ -104,7 +104,7 @@ Importantly, *I didn't read any of the mods' readmes*, and *I installed all the 
 
 ## What I Learned
 
-![Teflon the Tall](/images/posts/teflon-down-in-the-dumps.jpg)
+![Teflon the Tall](/assets/images/posts/teflon-down-in-the-dumps.jpg)
 *Today I Learned: Nords are miserable by default.*
 
 Once everything was set up, I went through all the mods' readmes, and checked the load order using TES5Edit. Here's what I found.
@@ -146,7 +146,7 @@ You might disagree with the short-cuts I've taken in this article, but I'm hardl
 
   I'd recommend writing readmes using [Markdown](http://daringfireball.net/projects/markdown/syntax) syntax in a `.txt` file, which provides a formatted readme that is readable anywhere, and which can be auto-converted into a more stylish HTML or PDF file using free tools such as [Pandoc](johnmacfarlane.net/pandoc/).
 
-  ![Markdown](/images/posts/markdown.png)
+  ![Markdown](/assets/images/posts/markdown.png)
   *This very article is written in Markdown.*
 
   You can split your readme up into several files if that makes sense. For example, [Alternate Start - Live Another Life](http://www.nexusmods.com/skyrim/mods/9557/?) has a readme for users and documentation for its addon system in a separate file.

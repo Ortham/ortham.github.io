@@ -5,7 +5,7 @@ permalink: /about/
 
 ### Me
 
-<img class="portrait" alt="my avatar" src="/images/me.png">
+<img class="portrait" alt="my avatar" src="/assets/images/me.png">
 <small class="portrait">Please don't try this at home.</small>
 
 I like to solve problems with code, and building things to learn new stuff. Most

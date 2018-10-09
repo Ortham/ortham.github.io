@@ -88,10 +88,10 @@ This gives you a slightly messy repository, but it works, and you don't need to 
 Here are a couple of screenshots in case I've since changed the design of the LOOT site again. It's worth noting that the two site designs took around the same amount of time to implement, and the Polymer-based UI didn't really draw on *that* much knowledge I'd picked up on in the intervening time.
 
 *Before the redesign...*
-![](/images/posts/site-pre-material-design.png)
+![](/assets/images/posts/site-pre-material-design.png)
 
 *...and after.*
-![](/images/posts/site-material-design.png)
+![](/assets/images/posts/site-material-design.png)
 
 ## To Be Continued...
 
