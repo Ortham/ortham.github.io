@@ -1,7 +1,7 @@
 ---
 title:  "New: Pseudosem"
 date:   2015-08-24
-summary: A library for permissive semantic version comparison in C++11.
+excerpt: A library for permissive semantic version comparison in C++11.
 ---
 
 LOOT's version string comparison algorithm has been split into its own library, [Pseudosem](https://github.com/WrinklyNinja/pseudosem)! It's a header-only C++11 library that comes with a suite of tests, and implements version comparison as described by [Semantic Versioning](http://semver.org/), but with some extensions to the allowed syntax to accommodate most forms of version strings (hence "permissive").

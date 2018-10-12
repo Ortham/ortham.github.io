@@ -1,7 +1,7 @@
 ---
 title:  "LOOT’s Site Redesigned"
 date:   2014-12-16
-summary: "Material Design, Polymer’s pitfalls, and interoperability with Jekyll."
+excerpt: "Material Design, Polymer’s pitfalls, and interoperability with Jekyll."
 ---
 
 I've (mostly) finished a new design for [LOOT's website](http://loot.github.io). It's something that I've been wanting to do for a while, but I didn't have any firm ideas for a new design. The release of the first beta for LOOT v0.7 changed that, as it has an HTML-based user interface, and that made it possible to easily reflect LOOT's UI in the site design.

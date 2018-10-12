@@ -1,7 +1,7 @@
 ---
 title:  "Physicalising LOOT’s Logo"
 date:   2015-01-11
-summary: "Cutting out an SVG icon using a home-made CNC router."
+excerpt: "Cutting out an SVG icon using a home-made CNC router."
 ---
 
 My brother and my dad spent some of their free time last year putting together a [CNC router](https://en.wikipedia.org/wiki/CNC_router), and they finally got it working over the Christmas holidays. When I was asked to help convert some bitmap images into SVGs so that they could be cut out, I had the idea of cutting out LOOT's logo, which I'd recently redesigned and redrawn as an SVG. My dad and I got it done late last night / early this morning, so I thought I'd post something to explain what we did and show off [some pictures](https://goo.gl/photos/YtfvqB4oBiHsQmE5A)!

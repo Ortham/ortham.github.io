@@ -1,7 +1,7 @@
 ---
 title:  "BOSS vs. LOOT In Numbers"
 date:   2015-03-11
-summary: "Analysing the stats, one year on."
+excerpt: "Analysing the stats, one year on."
 ---
 
 LOOT's first release, v0.5.0, was made on the 31st of March, 2014. Almost one year on, I thought I'd take a look at some stats to see how it's performing against its predecessor, BOSS.

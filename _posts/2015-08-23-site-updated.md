@@ -1,7 +1,7 @@
 ---
 title:  Site Updated
 date:   2015-08-23
-summary: Now using Pixyll v2.3.
+excerpt: Now using Pixyll v2.3.
 ---
 
 This site is now based off Pixyll v2.3!

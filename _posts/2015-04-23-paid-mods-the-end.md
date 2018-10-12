@@ -2,7 +2,7 @@
 title:  "Paid Skyrim Mods: Is This The End?"
 date:   2015-04-23
 update_date: 2015-04-28
-summary: "My thoughts on the matter."
+excerpt: "My thoughts on the matter."
 categories:
   - Skyrim
   - modding

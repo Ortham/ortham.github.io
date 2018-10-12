@@ -2,7 +2,7 @@
 title:  "Donating With Bitcoins"
 date:   2014-09-12 18:40
 update_date: 2014-09-13 06:23
-summary: "A guided adventure into the unknown."
+excerpt: "A guided adventure into the unknown."
 categories:
   - site
   - update

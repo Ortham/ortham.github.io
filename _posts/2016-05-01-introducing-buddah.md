@@ -1,7 +1,7 @@
 ---
 title:  "Introducing Buddah"
 date:   2016-05-01
-summary: A simple registry for community-made game modding software.
+excerpt: A simple registry for community-made game modding software.
 ---
 
 [Buddah](https://wrinklyninja.github.io/buddah/) is a new website of mine that provides a searchable registry/list of modding-related software. It's also a [GitHub repository](https://github.com/WrinklyNinja/buddah). I've created it to help software developers wanting to write modding-related software find out what already exists, and so avoid reinventing the wheel.

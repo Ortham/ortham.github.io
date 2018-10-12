@@ -1,7 +1,7 @@
 ---
 title:  "(Micro)donations With Flattr Now Available"
 date:   2014-09-12 17:32
-summary: "May be simpler for donors, though PayPal has better rates."
+excerpt: "May be simpler for donors, though PayPal has better rates."
 categories:
   - site
   - update

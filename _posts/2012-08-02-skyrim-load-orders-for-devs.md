@@ -1,7 +1,7 @@
 ---
 title:  "Skyrim Load Orders for Utility Developers"
 date:   2012-08-02
-summary: "A technical introduction to Skyrim’s load order system, and the existing standard for working with it."
+excerpt: "A technical introduction to Skyrim’s load order system, and the existing standard for working with it."
 categories:
   - Skyrim
   - modding

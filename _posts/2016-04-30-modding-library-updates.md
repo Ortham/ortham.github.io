@@ -1,7 +1,7 @@
 ---
 title:  Modding Library Updates
 date:   2016-04-30
-summary: libbsa, libespm and libloadorder changes & improvements.
+excerpt: libbsa, libespm and libloadorder changes & improvements.
 ---
 
 I've never actually written about my [libbsa](https://github.com/WrinklyNinja/libbsa), [libespm](https://github.com/WrinklyNinja/libespm) or [libloadorder](https://github.com/WrinklyNinja/libloadorder) libraries before, but I've been updating them recently so now's as good a time as any to do so.
