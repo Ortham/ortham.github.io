@@ -4,11 +4,11 @@ date:   2016-04-30
 excerpt: libbsa, libespm and libloadorder changes & improvements.
 ---
 
-I've never actually written about my [libbsa](https://github.com/WrinklyNinja/libbsa), [libespm](https://github.com/WrinklyNinja/libespm) or [libloadorder](https://github.com/WrinklyNinja/libloadorder) libraries before, but I've been updating them recently so now's as good a time as any to do so.
+I've never actually written about my [libbsa](https://github.com/Ortham/libbsa), [libespm](https://github.com/Ortham/libespm) or [libloadorder](https://github.com/Ortham/libloadorder) libraries before, but I've been updating them recently so now's as good a time as any to do so.
 
 ## libbsa
 
-[libbsa](https://github.com/WrinklyNinja/libbsa) is a library for reading BSAs and extracting their contents, with the aim of supporting BSAs for Morrowind, Oblivion, Skyrim, Fallout 3 and Fallout: New Vegas. I wrote it for [Wrye Bash](https://github.com/wrye-bash/wrye-bash), so that it could check inside BSA files when performing resource conflict detection between mod packages, and also so that it could detect Skyrim mod translation files when they were present inside a BSA. However, I also defined an API for writing and modifying BSAs, thinking to implement it later, then promptly lost interest.
+[libbsa](https://github.com/Ortham/libbsa) is a library for reading BSAs and extracting their contents, with the aim of supporting BSAs for Morrowind, Oblivion, Skyrim, Fallout 3 and Fallout: New Vegas. I wrote it for [Wrye Bash](https://github.com/wrye-bash/wrye-bash), so that it could check inside BSA files when performing resource conflict detection between mod packages, and also so that it could detect Skyrim mod translation files when they were present inside a BSA. However, I also defined an API for writing and modifying BSAs, thinking to implement it later, then promptly lost interest.
 
 Fast-forward to 2016, almost three years later, and there is now interest in adding support for Fallout 4's BA2 archives to libbsa. I'd learned a lot about writing good-quality code in the meantime (even if I don't always successfully apply that knowledge), so I decided to give the library a bit of a spring clean. The changes I made include:
 
@@ -26,7 +26,7 @@ In the future, I'd like libbsa to be more of a wrapper itself: there are other B
 
 ## libespm
 
-[libespm](https://github.com/WrinklyNinja/libespm) is the Elder Scrolls Plugin (\*.esp) and Elder Scrolls Master (\*.esm) file parser used by libloadorder (covered below) and [LOOT](http://loot.github.io). It's very simplistic, only supporting reading some header fields and record FormIDs, because that's all that is needed of it, but like libbsa the code was a bit gnarly.
+[libespm](https://github.com/Ortham/libespm) is the Elder Scrolls Plugin (\*.esp) and Elder Scrolls Master (\*.esm) file parser used by libloadorder (covered below) and [LOOT](http://loot.github.io). It's very simplistic, only supporting reading some header fields and record FormIDs, because that's all that is needed of it, but like libbsa the code was a bit gnarly.
 
 Libespm was actually the first of the three libraries that I went back to, shortly after I had TDD drummed into my head at work, and it was the perfect size and scope for a TDD-based rewrite. As part of the rewrite, I used C++ streams instead of array pointer arithmetic, which while slightly slower is a heck of a lot less error-prone and easier to read. I also used memory mapping to reduce the performance hit and added Fallout 4 support along the way, not to mention similar build system improvements and Travis CI integration that I later used for libbsa.
 
@@ -36,7 +36,7 @@ My intention is to keep libespm focussed on providing plugin parsing for libload
 
 ## libloadorder
 
-[libloadorder](https://github.com/WrinklyNinja/libloadorder) is used by LOOT and a few other utilities to handle reading and writing load order for Bethesda's Elder Scrolls (from Morrowind onwards) and Fallout games. In the last 6 months, it's seen:
+[libloadorder](https://github.com/Ortham/libloadorder) is used by LOOT and a few other utilities to handle reading and writing load order for Bethesda's Elder Scrolls (from Morrowind onwards) and Fallout games. In the last 6 months, it's seen:
 
 * hundreds more unit tests added
 * the C API turned into a wrapper around an internal C++ API to improve maintainability

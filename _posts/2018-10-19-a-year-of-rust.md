@@ -210,9 +210,9 @@ it was mostly an excuse to learn and practice Rust, and I think it paid off.
 
 ### libespm / esplugin
 
-[libespm](https://github.com/WrinklyNinja/libespm) is a C++ library, and Rust
+[libespm](https://github.com/Ortham/libespm) is a C++ library, and Rust
 can't expose a C++ API, so the Rust rewrite was done as a completely separate
-library, [esplugin](https://github.com/WrinklyNinja/esplugin).
+library, [esplugin](https://github.com/Ortham/esplugin).
 
 I decided to write the plugin parser using [nom](https://github.com/Geal/nom),
 which was overkill as it's a fairly simple file format, but it was a
@@ -331,7 +331,7 @@ from out-of-bounds memory access is best left to machines.
 
 ### libloadorder
 
-[libloadorder](https://github.com/WrinklyNinja/libloadorder) is a more complex
+[libloadorder](https://github.com/Ortham/libloadorder) is a more complex
 library that depends on libespm. It provides a C API and I was able to leave
 that unchanged (though I did actually make a few improvements), so
 the library was rewritten in-place. I found that there were significant
@@ -471,7 +471,7 @@ only issues found have been a few logic bugs.
 
 ### svg_to_ico
 
-[svg_to_ico](https://github.com/WrinklyNinja/svg_to_ico) is a very small
+[svg_to_ico](https://github.com/Ortham/svg_to_ico) is a very small
 library and CLI utility that converts SVG files to ICO files so they can be used
 as icons for Windows executables. I wrote it because LOOT used Imagemagick to
 do the same thing, but its AppVeyor CI builds would occasionally fail because
@@ -609,7 +609,7 @@ that's aimed at writing kernels, and it'll only get better as improvements like
 stabilised, and as the ecosystem grows and matures.
 
 I initially wrote a web service on top of [Hyper](https://hyper.rs/) as part of
-[Yore](https://github.com/WrinklyNinja/yore), but after [Actix
+[Yore](https://github.com/Ortham/yore), but after [Actix
 web](https://actix.rs/) got a lot of hype for being *really, really fast* ---
 it's in the top 10 for most of the TechEmpower Web Framework Benchmarks, and #1
 for the plaintext test --- I noticed that it also abstracted more detail away

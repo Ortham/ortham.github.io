@@ -10,7 +10,7 @@ LOOT's first release, v0.5.0, was made on the 31st of March, 2014. Almost one ye
 
 The release download numbers can be obtained using GitHub's Releases API, eg.
 
-<script src="https://gist.github.com/WrinklyNinja/62888dd1228b6631c5f0.js"></script>
+<script src="https://gist.github.com/Ortham/62888dd1228b6631c5f0.js"></script>
 
 #### Average Daily Download Rates
 

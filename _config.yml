@@ -13,14 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: WrinklyNinja’s Software Notes
+title: Ortham’s Software Notes
 name: Oliver Hamlet
 email: oliver.hamlet@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Writing about my software projects and related topics.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://wrinklyninja.github.io # the base hostname & protocol for your site, e.g. http://example.com
-repository: WrinklyNinja/wrinklyninja.github.io
+url: https://ortham.github.io # the base hostname & protocol for your site, e.g. http://example.com
+repository: Ortham/ortham.github.io
 locale: en-GB
 include: ["_pages"]
 
@@ -84,7 +84,7 @@ footer:
       url: https://www.paypal.me/OliverHamlet
     - label: GitHub
       icon: fab fa-fw fa-github
-      url: https://github.com/WrinklyNinja
+      url: https://github.com/Ortham
     - label: Email
       icon: fas fa-fw fa-at
       url: mailto:oliver.hamlet@gmail.com

@@ -17,13 +17,15 @@ I've also made or helped make a number of mods for The Elder Scrolls IV:
 Oblivion, and written some articles about modding on Oblivion, Skyrim, Fallout 3
 and Fallout: New Vegas, some of which can be found here.
 
-*WrinklyNinja* is my preferred pseudonym on the Internet. I got it from the last
-line of [this](https://www.youtube.com/watch?v=V2jDTufS5WY) Orange advert. It's
-not a great ad, but for some reason the last two words stuck in my head long
-after I'd totally forgotten about the rest of it. My avatar is Dan McNinja, from
-[The Adventures of Dr. McNinja](http://drmcninja.com/). I can't remember why he
-has knives taped to his face, but it's a suitably silly image that Chris
-Hastings was gracious enough to let me use.
+*Ortham* is my pseudonym on GitHub, but I've tended to go by *WrinklyNinja*
+elsewhere, particularly within the Elder Scrolls modding community. I got the
+latter name from the last line of
+[this](https://www.youtube.com/watch?v=V2jDTufS5WY) Orange advert. It's not a
+great ad, but for some reason the last two words stuck in my head long after I'd
+totally forgotten about the rest of it. My avatar is Dan McNinja, from [The
+Adventures of Dr. McNinja](http://drmcninja.com/). I can't remember why he has
+knives taped to his face, but it's a suitably silly image that Chris Hastings
+was gracious enough to let me use.
 
 When I'm not writing code, I like to chip away at the vast backlog of games that
 starts with my Steam library and listen to music. I also enjoy travelling and
@@ -34,7 +36,7 @@ organising them, so I don't do it enough.
 
 This is a [Jekyll](http://jekyllrb.com/) site, running a lightly customised
 version of [minimal-mistakes](https://mmistakes.github.io/minimal-mistakes), and
-hosted on [GitHub](https://github.com/WrinklyNinja/wrinklyninja.github.io). It's
+hosted on [GitHub](https://github.com/Ortham/Ortham.github.io). It's
 where I put anything that's probably too long to make a forum post, so is mostly
 related to the software projects I work on.
 

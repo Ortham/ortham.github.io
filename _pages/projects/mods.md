@@ -19,7 +19,7 @@ I've been involved in modding Bethesda's Elder Scrolls and Fallout games since 2
     <img alt="BOSS icon" src="/assets/images/BOSS.png"><p>A plugin load order sorting tool for TES IV: Oblivion, Nehrim - At Fate's Edge, TES V: Skyrim, Fallout 3 and Fallout: New Vegas. This was considered an essential tool by the vast majority of mod users, until I wrote LOOT.</p>
 </div>
 
-#### [StrEdit](http://github.com/WrinklyNinja/stredit)
+#### [StrEdit](http://github.com/Ortham/stredit)
 
 <div class="table-row">
     <img alt="StrEdit icon" src="/assets/images/StrEdit.png"><p>A minimalist TES V: Skyrim string table editor designed for mod translators. </p>
@@ -35,11 +35,11 @@ I've been involved in modding Bethesda's Elder Scrolls and Fallout games since 2
 
 As well as the guides available on this site's blog, I've also written the following.
 
-#### [FOPDoc](https://github.com/WrinklyNinja/fopdoc)
+#### [FOPDoc](https://github.com/Ortham/fopdoc)
 
 Collaborative documentation for the Fallout 3 and Fallout: New Vegas plugin file formats. *I'm no longer working on this, but I'll still merge pull requests.*
 
-#### [Buddah](https://github.com/WrinklyNinja/buddah)
+#### [Buddah](https://github.com/Ortham/buddah)
 
 A simple registry for community-made game modding software, because I found it discovering it difficult.
 
@@ -51,23 +51,23 @@ Over the years, I've made various contributions to UESP.net's [plugin file forma
 
 Libraries with C APIs that can be used by mod utility developers to make their lives easier.
 
-#### [esplugin](http://github.com/WrinklyNinja/esplugin)
+#### [esplugin](http://github.com/Ortham/esplugin)
 
 Read ESP, ESM and ESL files. A Rust library with a C wrapper, used by LOOT and libloadorder.
 
-#### [libloadorder](http://github.com/WrinklyNinja/libloadorder)
+#### [libloadorder](http://github.com/Ortham/libloadorder)
 
 Manipulate the load order and active status of plugins for Morrowind, Oblivion, Skyrim, Skyrim SE, Skyrim VR, Fallout 3, Fallout: New Vegas, Fallout 4 and Fallout 4 VR. A Rust library with a C wrapper, though it was written in C++ for a long time. Used by LOOT.
 
-#### [libstrings](http://github.com/WrinklyNinja/libstrings)
+#### [libstrings](http://github.com/Ortham/libstrings)
 
 Read and write TES V: Skyrim's string table files.
 
-#### [libbsa](http://github.com/WrinklyNinja/libbsa)
+#### [libbsa](http://github.com/Ortham/libbsa)
 
 Read Morrowind, Oblivion, Skyrim, Fallout 3 and Fallout: New Vegas BSA files. *In limbo: I may turn it into a wrapper for [BSAOpt](https://github.com/Ethatron/bsaopt).*
 
-#### [libespm](http://github.com/WrinklyNinja/libespm)
+#### [libespm](http://github.com/Ortham/libespm)
 
 A basic header-only library for reading ESP and ESM files. Superseded by esplugin.
 
