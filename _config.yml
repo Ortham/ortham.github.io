@@ -23,6 +23,7 @@ url: https://ortham.github.io # the base hostname & protocol for your site, e.g.
 repository: Ortham/ortham.github.io
 locale: en-GB
 include: ["_pages"]
+date_format: "%b %-d, %Y"
 
 # Build settings
 markdown: kramdown
