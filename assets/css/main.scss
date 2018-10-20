@@ -1,8 +1,24 @@
 ---
 ---
 
+@charset "utf-8";
+
+$monospace: 'Source Code Pro', Consolas, monospace;
+$background-color: #1d1f21 !default;
+$primary-color: #2196f3;
+
 @import "minimal-mistakes/skins/dark";
 @import "{{ site.theme }}";
+
+/* minimal-mistakes overrides */
+div.highlighter-rouge {
+    line-height: 1.5;
+}
+
+.archive__item-title a {
+    text-decoration: none;
+    transition: none;
+}
 
 /* Custom CSS for my projects pages. */
 .table-row {
