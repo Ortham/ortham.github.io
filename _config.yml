@@ -27,7 +27,7 @@ date_format: "%b %-d, %Y"
 
 # Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: mmistakes/minimal-mistakes@4.13.0
 plugins:
   # GitHub Pages: Enabled by default
   - jekyll-coffeescript
