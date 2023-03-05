@@ -76,7 +76,7 @@ defaults:
 # minimal-mistakes
 minimal_mistakes_skin: dark
 head_scripts:
-  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML
   - https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.js
 footer:
   links:
