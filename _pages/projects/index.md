@@ -7,7 +7,7 @@ permalink: /projects/
 
 ### Current Projects
 
-I'm currently working on [LOOT](https://loot.github.io), various related libraries and [Yore](https://github.com/Ortham/yore).
+I'm currently working on [LOOT](https://loot.github.io) and various related libraries.
 
 ### Miscellaneous
 
