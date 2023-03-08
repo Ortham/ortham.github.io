@@ -16,37 +16,20 @@ div.highlighter-rouge {
 }
 
 #page-title {
-    font-size: 3rem;
+    font-size: $type-size-1;
 }
 
 .page__meta {
-    font-size: 1rem;
+    font-size: $type-size-5;
     color: #7a7a7a;
     font-style: italic;
     font-family: Merriweather, 'PT Serif', Georgia, 'Times New Roman', serif;
     font-weight: 300;
 }
 
-.page__inner-wrap > header > .page__meta {
-    margin-bottom: 1rem;
-    padding: 5px;
-}
-
-.page__inner-wrap > header > .page__meta > p {
-    padding: 5px 0;
-}
-
-.page__inner-wrap > header > .page__meta > p:last-child {
-    font-size: 0.7rem;
-}
-
 .archive__item-title > a {
     text-decoration: none;
     transition: none;
-}
-
-.archive__item-title .page__meta {
-    font-size: 0.75rem;
 }
 
 .taxonomy__section .archive__item-title {
