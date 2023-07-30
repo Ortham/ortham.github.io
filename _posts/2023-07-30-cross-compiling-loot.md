@@ -1,7 +1,7 @@
 ---
 title: Cross-compiling LOOT
 date: 2023-07-30
-excerpt: For Windows, from Linux
+excerpt: For Windows, from Linux.
 ---
 
 [LOOT](https://loot.github.io/) is a utility that helps people use game mods for Bethesda's Elder Scrolls and Fallout games. These games are native Windows applications, and LOOT is released as a native Windows application. However, LOOT's CI includes Linux builds, and over the years there has been some interest in running it as a native Linux application as well as running the Windows build in Linux using [Wine](https://www.winehq.org/).
@@ -37,21 +37,26 @@ to make sure the base install was up to date.
 Cross-compiling is done using the [MinGW-w64](https://www.mingw-w64.org/) runtime environment. Ubuntu 20.04 includes an older version in its APT repositories, based on GCC 9.3, and that might be fine to use, but I built everything from source using [MXE](https://mxe.cc/):
 
 ```
-sudo apt-get install -y autoconf automake autopoint bash bison bzip2 flex g++ g++-multilib gettext git gperf intltool libc6-dev-i386 libgdk-pixbuf2.0-dev libltdl-dev libgl-dev libpcre3-dev libtool-bin libssl-dev libxml-parser-perl lzip make openssl patch perl python3 python3-distutils python3-mako python3-pkg-resources python-is-python3 p7zip-full ruby sed unzip xz-utils
+sudo apt-get install -y autoconf automake autopoint bash bison bzip2 flex g++ \
+    g++-multilib gettext git gperf intltool libc6-dev-i386 libgdk-pixbuf2.0-dev \
+    libltdl-dev libgl-dev libpcre3-dev libtool-bin libssl-dev libxml-parser-perl \
+    lzip make openssl patch perl python3 python3-distutils python3-mako \
+    python3-pkg-resources python-is-python3 p7zip-full ruby sed unzip xz-utils
 
 cd ~/Downloads
 git clone https://github.com/mxe/mxe.git
 cd mxe
 git checkout bafab43e83
 
-sed -i 's/c28c8be/9e219e2/' src/intel-tbb.mk
-sed -i 's/a9a0f059703f9c018c83ec52bc10eb31d1e32da37f464a7de7fdcec80f23c645/194eadccc12f90586f17b329315fcb6f8834304e6a6e7724bcd0cb747c3e94ea/'  src/intel-tbb.mk
+sed -i -e 's/c28c8be/9e219e2/' \
+    -e 's/a9a0f059703f9c018c83ec52bc10eb31d1e32da37f464a7de7fdcec80f23c645/194eadccc12f90586f17b329315fcb6f8834304e6a6e7724bcd0cb747c3e94ea/' \
+    src/intel-tbb.mk
 rm src/intel-tbb-1-fixes.patch
 
 make MXE_TARGETS=x86_64-w64-mingw32.static boost qt6-qtbase intel-tbb
 ```
 
-TBB's makefile is patched because as of MXE commit bafab43e83, the version that MXE builds by default is too old to be used for GCC's parallel algorithms support. The most recent TBB commit was used: you could probably use an earlier commit of TBB, but I don't expect anything earlier than [6c9faad](https://github.com/wjakob/tbb/commit/6c9faad2aa3d85a12826fbe5d6b964c590c12420) to work.
+TBB's makefile is patched because as of MXE commit [bafab43e83](https://github.com/mxe/mxe/commit/bafab43e83ebeb63bc1b57e1292b27378f1c3acc), the version that MXE builds by default is too old to be used for GCC's parallel algorithms support. The most recent TBB commit was used: you could probably use an earlier commit of TBB, but I don't expect anything earlier than [6c9faad](https://github.com/wjakob/tbb/commit/6c9faad2aa3d85a12826fbe5d6b964c590c12420) to work.
 
 This builds static 64-bit binaries for Boost, Qt 6 and TBB, along with their dependencies and tools like GCC and MingGW-w64.
 
@@ -122,7 +127,7 @@ tar -xJf svg_to_ico.tar.xz
 rm svg_to_ico.tar.xz README.md
 ```
 
-The clone the LOOT Git repository and build LOOT:
+Then clone the LOOT Git repository and build LOOT:
 
 ```
 cd ~/Downloads
@@ -135,11 +140,13 @@ cd build
 
 ~/Downloads/svg_to_ico --output icon/icon.ico --input ../resources/icons/loot.svg
 
-x86_64-w64-mingw32.static-cmake .. -DCMAKE_TOOLCHAIN_FILE=~/Downloads/toolchain.cmake -DLIBLOOT_URL=$HOME/Downloads/libloot/build/package/libloot-0.19.4-6-g3b41f57-win64.7z -DLIBLOOT_HASH=
+x86_64-w64-mingw32.static-cmake .. -DCMAKE_TOOLCHAIN_FILE=~/Downloads/toolchain.cmake \
+    -DLIBLOOT_URL=$HOME/Downloads/libloot/build/package/libloot-0.19.4-6-g3b41f57-win64.7z \
+    -DLIBLOOT_HASH=
 x86_64-w64-mingw32.static-cmake --build .
 ```
 
-`LIBLOOT_URL` points to the archive created earlier, so if you've built a different version of libloot, update the variable's value accordingly.
+`LIBLOOT_URL` points to the archive created earlier, so if you've built a different version of libloot, update the variable's value accordingly. `LIBLOOT_HASH` is intentionally given no value, to skip hash verification.
 
 LOOT commits older than [dfda129](https://github.com/loot/loot/commit/dfda129a12699441d15a2766fb8f18e87efecfbc) won't work without changes to its CMakeLists file.
 
@@ -161,8 +168,10 @@ Instead, install Wine from Wine HQ's repository:
 
 ```
 sudo mkdir -pm755 /etc/apt/keyrings
-sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
-sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/focal/winehq-focal.sources
+sudo wget -O /etc/apt/keyrings/winehq-archive.key \
+    https://dl.winehq.org/wine-builds/winehq.key
+sudo wget -NP /etc/apt/sources.list.d/ \
+    https://dl.winehq.org/wine-builds/ubuntu/dists/focal/winehq-focal.sources
 sudo apt-get update
 sudo apt-get install -y --install-recommends winehq-stable
 ```
