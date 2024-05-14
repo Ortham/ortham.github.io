@@ -8,7 +8,7 @@ excerpt: A walkthrough of setting up a (mostly) working (roughly) equivalent to 
 
 With Windows 10 reaching end of life in October 2025, Windows 11 being a half-baked regression in many ways, and the recent introduction of (more!) advertisements into Windows 11's Start menu, I thought it would be worth looking into how viable switching to Linux would be. As part of this, I went through what I use in Windows to check that there's an equivalent in Linux.
 
-My PC uses Bitlocker full disk encryption with Secure Boot and TPM + PIN unlock, and replicating that on Linux turned out to be more difficult than expected. This post is a walkthrough of what's involved, explaining what needs to be done and providing complete step-by-step instructions. It's what I wished I'd found when I started looking into the subject. I've pieces the information here together from various man pages, blogs and wikis, and linked to them throughout this post.
+My PC uses Bitlocker full disk encryption with Secure Boot and TPM + PIN unlock, and replicating that on Linux turned out to be more difficult than expected. This post is a walkthrough of what's involved, explaining what needs to be done and providing complete step-by-step instructions. It's what I wished I'd found when I started looking into the subject. I've pieced the information here together from various man pages, blogs and wikis, and linked to them throughout this post.
 
 ## The Pieces
 
@@ -167,7 +167,7 @@ It is possible to set a password for MokManager by running `mokutil --password` 
 
 However, it's not clear to me where this password is stored: I assume that it's in the TPM, as I can't think where else would be safe at that point in the boot process. If that is the case, that's probably good enough: a compromised MokManager could bypass the password check, but MokManager is signed so that would need one of the distribution signing keys to be compromised too.
 
-There are other mitigations you can use to protect against this risk, as the MOK certificate is something that gets measured as part of Measured Boot, and you can bind FDE unlock to the relevant TPM PCR (14) so that if a different certificate is used the PCR will be different and unlock will not proceed. More on that later.
+There are other mitigations you can use to protect against this risk, as the MOK certificate is measured by the shim, which stores the measurement in PCR 14. More on that later.
 
 It's also worth noting that I'm assuming that the keys that Secure Boot trusts by default are trustworthy (it is possible to remove them, but I didn't investigate that), and that a UEFI password is set so that an attacker couldn't just enrol their own key and so have Secure Boot trust their compromised boot components signed with that key.
 
