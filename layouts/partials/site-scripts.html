@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="/main.css">
+
+{{ if .Store.Get "hasMermaid" }}
+{{ partialCached "mermaid.html" . }}
+{{ end }}
+
+{{ if .Param "mathjax" }}
+{{ partialCached "mathjax.html" . }}
+{{ end }}
+
+{{ if .Param "d3" }}
+{{ partialCached "d3.html" . }}
+{{ end }}

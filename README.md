@@ -1,7 +1,17 @@
-This is a Jekyll site, the easiest way to build it is using Docker:
+This site is generated using [Hugo](https://gohugo.io). The easiest way to build it is to:
 
-```
-docker run --rm -v ${PWD}:/srv/jekyll -v jekyll_bundle:/usr/local/bundle -p 4000:4000 -it jekyll/jekyll:4.2.2 jekyll serve --no-watch
-```
+1. Download a [prebuilt Hugo binary](https://github.com/gohugoio/hugo/releases/latest).
+2. Add the binary to your `PATH`.
+3. Run `hugo` from the root of this repository.
 
-The Docker container tag should match the version of `jekyll` listed [here](https://pages.github.com/versions/), but at time of writing that page gives the version as `3.9.3`, and there is no corresponding Docker image tagged, and 3.8.6 uses a Ruby version that's too old.
+Hugo will create the generated site in the `public` folder.
+
+## Theme-specific features
+
+Some features rely on theme-specific params, configuration or partial templates. They are:
+
+- `i18n/en.toml` is used to override the text that the theme displays for its generated tables of contents.
+- `layouts/partials/site-scripts.html` is used to insert content into the page `<head>`.
+- `params.ananke_socials` is used to configure the "social" links that get displayed by the theme in the header and footer.
+- `parms.show_reading_time` in post front matters is used to control whether a reading time estimate is shown for that post. It's currently cascaded down to all posts.
+- `params.toc` in post front matters is used to control whether a table of contents is generated for that post.

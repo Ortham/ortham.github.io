@@ -1,0 +1,42 @@
+baseURL = 'https://blog.ortham.net/'
+languageCode = 'en-GB'
+title = "Ortham's Software Notes"
+theme = "ananke"
+
+paginate = 30
+
+[[menus.main]]
+name = "My Projects"
+pageRef = "/projects"
+weight = 10
+
+[[menus.main]]
+name = "Archive"
+pageRef = "/posts"
+weight = 20
+
+[[menus.main]]
+name = "About"
+pageRef = "/about"
+weight = 30
+
+[[params.ananke_socials]]
+name = "paypal"
+url = "https://www.paypal.me/OliverHamlet"
+
+[[params.ananke_socials]]
+name = "github"
+url = "https://github.com/Ortham"
+
+[[params.ananke_socials]]
+name = "email"
+url = "mailto:oliver.hamlet@gmail.com"
+
+[markup.goldmark.renderer]
+unsafe = true # Needed to render HTML blocks in Markdown
+
+[markup.goldmark.extensions.passthrough]
+enable = true
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['\[', '\]'], ['$$', '$$']]
+inline = [['\(', '\)']]
