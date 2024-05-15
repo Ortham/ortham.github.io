@@ -34,7 +34,7 @@ organising them, so I don't do it enough.
 
 ### This Site
 
-This is a [Jekyll](http://jekyllrb.com/) site, running a lightly customised
+This is a [Jekyll](https://jekyllrb.com/) site, running a lightly customised
 version of [minimal-mistakes](https://mmistakes.github.io/minimal-mistakes), and
 hosted on [GitHub](https://github.com/Ortham/Ortham.github.io). It's
 where I put anything that's probably too long to make a forum post, so is mostly

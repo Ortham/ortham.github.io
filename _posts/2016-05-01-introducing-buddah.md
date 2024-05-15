@@ -6,7 +6,7 @@ excerpt: A simple registry for community-made game modding software.
 
 [Buddah](https://ortham.github.io/buddah/) is a new website of mine that provides a searchable registry/list of modding-related software. It's also a [GitHub repository](https://github.com/Ortham/buddah). I've created it to help software developers wanting to write modding-related software find out what already exists, and so avoid reinventing the wheel.
 
-Buddah's design is inspired by the websites for the [NPM](https://www.npmjs.com) and [Bower](http://bower.io/) package managers. However, Buddah is not related to any package manager, and it's not a project hosting or publishing site. It's a static site that only stores metadata on the projects it lists, and projects don't need to be "release-ready" to be registered. As stated in the contributing guide, the only requirement is that projects are software related modding a game. They can be for any game, open or closed source, and in any state of completion.
+Buddah's design is inspired by the websites for the [NPM](https://www.npmjs.com) and [Bower](https://bower.io/) package managers. However, Buddah is not related to any package manager, and it's not a project hosting or publishing site. It's a static site that only stores metadata on the projects it lists, and projects don't need to be "release-ready" to be registered. As stated in the contributing guide, the only requirement is that projects are software related modding a game. They can be for any game, open or closed source, and in any state of completion.
 
 ## The Past
 

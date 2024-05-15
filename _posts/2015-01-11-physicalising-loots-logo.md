@@ -6,7 +6,7 @@ excerpt: "Cutting out an SVG icon using a home-made CNC router."
 
 My brother and my dad spent some of their free time last year putting together a [CNC router](https://en.wikipedia.org/wiki/CNC_router), and they finally got it working over the Christmas holidays. When I was asked to help convert some bitmap images into SVGs so that they could be cut out, I had the idea of cutting out LOOT's logo, which I'd recently redesigned and redrawn as an SVG. My dad and I got it done late last night / early this morning, so I thought I'd post something to explain what we did and show off [some pictures](https://goo.gl/photos/YtfvqB4oBiHsQmE5A)!
 
-As a very brief overview, the CNC router is a drill mounted above a cutting table that can be moved along the x, y and z axes. It's controlled via a parallel printer port and some circuitry by an old desktop computer running [LinuxCNC 2.6](http://www.linuxcnc.org/). It's like a 3D printer, but it cuts shapes out of various materials instead of pasting them together (although I think ours could also do rudimentary 3D printing if we had a hot plate).
+As a very brief overview, the CNC router is a drill mounted above a cutting table that can be moved along the x, y and z axes. It's controlled via a parallel printer port and some circuitry by an old desktop computer running [LinuxCNC 2.6](https://www.linuxcnc.org/). It's like a 3D printer, but it cuts shapes out of various materials instead of pasting them together (although I think ours could also do rudimentary 3D printing if we had a hot plate).
 
 ![If you can't see this image, you can browse the album through the link in the first paragraph of this article.](https://lh3.googleusercontent.com/-l1p13bgdkIw/VLLPiLFoX-I/AAAAAAAAMzY/nlM0o6D_8X8/w829-h622-no/IMG_20150110_222817.jpg)
 *Our CNC router, just after cutting some aluminium.*
@@ -17,7 +17,7 @@ Yes, that's a terrible pun. The CNC router is controlled by the computer using [
 
 The first step was to remove all the parts of the logo that didn't describe the logo's shapes, ie. shadows, shading and tinting. Once that was done, the image was opened in [Inkscape](https://inkscape.org/en/) and its Path Union and Path Difference tools were used to split the logo into three files, each holding a different layer of the physical logo (from top to bottom: the lettering, the banding and the background).
 
-We then imported the three files into the online conversion tool [MakerCAM](http://www.makercam.com/), which we used simply because it was the first tool my brother found, and used it to set the various machine parameters, such as:
+We then imported the three files into the online conversion tool [MakerCAM](https://makercam.com/), which we used simply because it was the first tool my brother found, and used it to set the various machine parameters, such as:
 
 * Drill bit diameter (5 mm)
 * Layer depths (3 mm, 6 mm and 12 mm)

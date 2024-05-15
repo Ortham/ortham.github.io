@@ -41,28 +41,28 @@ So, here are the mods I added.
 
 These mods are those I already know that I wouldn't play without (unless something better comes along), after a few hours:
 
-* [Alternate Start - Live Another Life](http://www.nexusmods.com/skyrim/mods/9557/?): While I enjoyed Skyrim's beginning a lot more than Oblivion's, a chance to roleplay something different is welcome, and it gets me into the action faster.
-* [Climates of Tamriel](http://www.nexusmods.com/skyrim/mods/17802/?): It gives me darker nights. I've never had a problem with Skyrim's weather though, so this may be overkill.
-* [Realistic Lighting Overhaul](http://www.nexusmods.com/skyrim/mods/30450/?): This fixes dungeons to be dark where there are no light sources, which got me hacked to pieces in the dark on my first dungeon crawl. I also like the changes it makes to the lighting in the rest of the game, it feels that much more atmospheric.
-  * [Wearable Lanterns](http://www.nexusmods.com/skyrim/mods/17416): After my first death, I bought myself one of these, then went back to the cave. I lasted a few seconds longer...
+* [Alternate Start - Live Another Life](https://www.nexusmods.com/skyrim/mods/9557/?): While I enjoyed Skyrim's beginning a lot more than Oblivion's, a chance to roleplay something different is welcome, and it gets me into the action faster.
+* [Climates of Tamriel](https://www.nexusmods.com/skyrim/mods/17802/?): It gives me darker nights. I've never had a problem with Skyrim's weather though, so this may be overkill.
+* [Realistic Lighting Overhaul](https://www.nexusmods.com/skyrim/mods/30450/?): This fixes dungeons to be dark where there are no light sources, which got me hacked to pieces in the dark on my first dungeon crawl. I also like the changes it makes to the lighting in the rest of the game, it feels that much more atmospheric.
+  * [Wearable Lanterns](https://www.nexusmods.com/skyrim/mods/17416): After my first death, I bought myself one of these, then went back to the cave. I lasted a few seconds longer...
 * [Frostfall - Hypothermia Camping Survival](https://forums.bethsoft.com/topic/1509561-frostfall/): Environmental gameplay mechanics!
-  * [Cloaks of Skyrim](http://www.nexusmods.com/skyrim/mods/12092/?): Makes up for the lack of warm clothing in vanilla.
-  * [Winter Is Coming - Cloaks](http://www.nexusmods.com/skyrim/mods/13486): Just as good as the above, so why not use both?
-* [Lock Overhaul](http://www.nexusmods.com/skyrim/mods/29979/): Adds lock bashing, which is sorely needed by my warrior. I like how all it involves is swinging at the lock until a success sound plays or I get an "it's too tough" message in the corner of my screen. However, script lag makes the experience into cause, pause and effect, and the volume of the success sound makes the preceding action seem too quiet.
+  * [Cloaks of Skyrim](https://www.nexusmods.com/skyrim/mods/12092/?): Makes up for the lack of warm clothing in vanilla.
+  * [Winter Is Coming - Cloaks](https://www.nexusmods.com/skyrim/mods/13486): Just as good as the above, so why not use both?
+* [Lock Overhaul](https://www.nexusmods.com/skyrim/mods/29979/): Adds lock bashing, which is sorely needed by my warrior. I like how all it involves is swinging at the lock until a success sound plays or I get an "it's too tough" message in the corner of my screen. However, script lag makes the experience into cause, pause and effect, and the volume of the success sound makes the preceding action seem too quiet.
 
 
 ### Other Mods
 
-* [Better Dynamic Snow](http://www.nexusmods.com/skyrim/mods/10383/?): I'd noticed it looking rubbish at a few points.
-* [W.A.T.E.R. - Water and Terrain Enhancement Redux](http://www.nexusmods.com/skyrim/mods/13268/?): The water looks better, but I don't think there's much wrong with vanilla water.
-* [Wet and Cold - Holidays](http://www.nexusmods.com/skyrim/mods/51472/): A wonderful little mod, adds a little vibrancy and cheer to the game. It requires [Wet and Cold](http://www.nexusmods.com/skyrim/mods/27563/?), which I'm not really interested in, and for consistency I also use [Wet and Cold - Ashes](http://www.nexusmods.com/skyrim/mods/31968/?).
-* [Run For Your Lives](http://www.nexusmods.com/skyrim/mods/23906/?): The appropriate response when meeting a dragon is, after all, to run screaming.
+* [Better Dynamic Snow](https://www.nexusmods.com/skyrim/mods/10383/?): I'd noticed it looking rubbish at a few points.
+* [W.A.T.E.R. - Water and Terrain Enhancement Redux](https://www.nexusmods.com/skyrim/mods/13268/?): The water looks better, but I don't think there's much wrong with vanilla water.
+* [Wet and Cold - Holidays](https://www.nexusmods.com/skyrim/mods/51472/): A wonderful little mod, adds a little vibrancy and cheer to the game. It requires [Wet and Cold](https://www.nexusmods.com/skyrim/mods/27563/?), which I'm not really interested in, and for consistency I also use [Wet and Cold - Ashes](https://www.nexusmods.com/skyrim/mods/31968/?).
+* [Run For Your Lives](https://www.nexusmods.com/skyrim/mods/23906/?): The appropriate response when meeting a dragon is, after all, to run screaming.
 * [Open Faced Guard Helmets](https://skyrim.nexusmods.com/mods/9514): It's slightly creepy how you can't otherwise see their eyes...
-* [Immersive Armors](http://www.nexusmods.com/skyrim/mods/19733): More armour varieties, I've already picked up a cool painted shield.
-* [Unique Uniques](http://www.nexusmods.com/skyrim/mods/33292/?): More unique gear is usually a good thing.
-* [Falskaar](http://www.nexusmods.com/skyrim/mods/37994/?): A quest mod everyone has gone crazy for.
-* [Wyrmstooth](http://www.nexusmods.com/skyrim/mods/25704/?): Another impressive-looking quest mod.
-* [Moonpath to Elsweyr](http://www.nexusmods.com/skyrim/mods/9782/?): A third quest mod, that should provide an interesting change of scenery.
+* [Immersive Armors](https://www.nexusmods.com/skyrim/mods/19733): More armour varieties, I've already picked up a cool painted shield.
+* [Unique Uniques](https://www.nexusmods.com/skyrim/mods/33292/?): More unique gear is usually a good thing.
+* [Falskaar](https://www.nexusmods.com/skyrim/mods/37994/?): A quest mod everyone has gone crazy for.
+* [Wyrmstooth](https://www.nexusmods.com/skyrim/mods/25704/?): Another impressive-looking quest mod.
+* [Moonpath to Elsweyr](https://www.nexusmods.com/skyrim/mods/9782/?): A third quest mod, that should provide an interesting change of scenery.
 
 ### 404: Mod Not Found
 
@@ -70,7 +70,7 @@ I couldn't find any mod that fulfilled my wants for diseases that matter to game
 
 Preferably, diseases would progress, sapping my stats until I'm useless in a fight, but not so quickly that there's a significant risk of being killed between noticing and getting cured (assuming I hightail it back to a shrine straight away).
 
-[Deadly Diseases](http://www.nexusmods.com/skyrim/mods/50767/?) is too severe, [Diseased](http://www.nexusmods.com/skyrim/mods/27780/?) looks almost right, but it's incompatible with Dragonborn, and I don't want to use a 'needs' mod such as [Realistic Needs and Diseases](http://www.nexusmods.com/skyrim/mods/26228/?) or [iNeed](http://www.nexusmods.com/skyrim/mods/51473/?). Darker nights provide enough incentive to sleep, and eating food when you can't actually taste it is an incredibly dull affair.
+[Deadly Diseases](https://www.nexusmods.com/skyrim/mods/50767/?) is too severe, [Diseased](https://www.nexusmods.com/skyrim/mods/27780/?) looks almost right, but it's incompatible with Dragonborn, and I don't want to use a 'needs' mod such as [Realistic Needs and Diseases](https://www.nexusmods.com/skyrim/mods/26228/?) or [iNeed](https://www.nexusmods.com/skyrim/mods/51473/?). Darker nights provide enough incentive to sleep, and eating food when you can't actually taste it is an incredibly dull affair.
 
 ## Getting Set Up
 
@@ -78,13 +78,13 @@ Preferably, diseases would progress, sapping my stats until I'm useless in a fig
 
 With my mods chosen, I then had to decide how to install and manage them. I'd found all my mods, bar SkyUI, browsing Skyrim Nexus' Top Files list, so downloading them from there using the managed option was an obvious choice.
 
-Now, maybe the newbie thing to do would have been to install the [Nexus Mod Manager](http://www.nexusmods.com/skyrim/mods/modmanager/?) (NMM), but I went with [Mod Organiser](https://www.nexusmods.com/skyrim/mods/1334/) (MO) instead, because:
+Now, maybe the newbie thing to do would have been to install the [Nexus Mod Manager](https://www.nexusmods.com/skyrim/mods/modmanager/?) (NMM), but I went with [Mod Organiser](https://www.nexusmods.com/skyrim/mods/1334/) (MO) instead, because:
 
 1. It's very popular.
 2. It supports the same managed download system as NMM.
 3. It has a sophisticated profiles feature, which could prove very useful for me, as I install a lot of mods I don't play with, for testing purposes, and the profiles can keep my test system separate from my play system.
 
-The other major mod manager is [Wrye Bash](http://www.nexusmods.com/skyrim/mods/1840/?). I decided not to use it to manage my mods because it has an (undeserved) reputation of being very complicated to use, so probably wouldn't be an attractive choice for newbies. I still use it to build a Bashed Patch though, as that is an indispensible aid to resolving compatibility issues.
+The other major mod manager is [Wrye Bash](https://www.nexusmods.com/skyrim/mods/1840/?). I decided not to use it to manage my mods because it has an (undeserved) reputation of being very complicated to use, so probably wouldn't be an attractive choice for newbies. I still use it to build a Bashed Patch though, as that is an indispensible aid to resolving compatibility issues.
 
 MO bundles its own fork of [LOOT](https://loot.github.io) v0.5, but I decided to use LOOT's latest snapshot build instead. I wouldn't recommend this in general, as such builds aren't stable, but my terribly biased opinion is that it's a big improvement.
 
@@ -113,7 +113,7 @@ Once everything was set up, I went through all the mods' readmes, and checked th
 2. All the mods were plug-and-play, ie. I didn't need their readmes to figure out how use them. This is *excellent* mod design. Mods should be fully documented, but should also integrate well enough that basic usage is clear or occurs naturally.
 3. Most of the mods made their requirements clear in their online description pages, which is good because it means I'm more likely to get everything I need in one go.
 
-   The only thing that tripped me up was that [Alternate Start - Live Another Life](http://www.nexusmods.com/skyrim/mods/9557/?) has silent dialog, and so requires either subtitles to be enabled, or the use of [Fuz Ro Doh](http://www.nexusmods.com/skyrim/mods/14884). This isn't mentioned in the online description's requirements section, but it is in the readme.
+   The only thing that tripped me up was that [Alternate Start - Live Another Life](https://www.nexusmods.com/skyrim/mods/9557/?) has silent dialog, and so requires either subtitles to be enabled, or the use of [Fuz Ro Doh](https://www.nexusmods.com/skyrim/mods/14884). This isn't mentioned in the online description's requirements section, but it is in the readme.
 4. A disappointing number of mods came with no readme, or a very sparse readme, so I couldn't have read them even if I'd tried.
 
 Based on these findings, I've made some suggestions for mod users and authors below. If you fall into one of those categories, I hope you'll find the tips useful, and I'm always open to feedback. Just send me a message on the BethSoft or Nexus forums, or click one of the social icons at the top of the page.
@@ -144,11 +144,11 @@ You might disagree with the short-cuts I've taken in this article, but I'm hardl
 * Package your mods so that they can be installed simply. BAIN-ready archives are easy to make and easy to use. If your mod has optional components, including an install script (BAIN Wizard and/or FOMOD) provides a really smooth install experience.
 * **Include a readme.** A good readme includes everything useful to know about a mod. If the sites it's hosted on disappeared, would people still know what it does, how to use it, who made it, and so on?
 
-  I'd recommend writing readmes using [Markdown](http://daringfireball.net/projects/markdown/syntax) syntax in a `.txt` file, which provides a formatted readme that is readable anywhere, and which can be auto-converted into a more stylish HTML or PDF file using free tools such as [Pandoc](https://johnmacfarlane.net/pandoc/).
+  I'd recommend writing readmes using [Markdown](https://daringfireball.net/projects/markdown/syntax) syntax in a `.txt` file, which provides a formatted readme that is readable anywhere, and which can be auto-converted into a more stylish HTML or PDF file using free tools such as [Pandoc](https://johnmacfarlane.net/pandoc/).
 
   ![Markdown](/assets/images/posts/markdown.png)
   *This very article is written in Markdown.*
 
-  You can split your readme up into several files if that makes sense. For example, [Alternate Start - Live Another Life](http://www.nexusmods.com/skyrim/mods/9557/?) has a readme for users and documentation for its addon system in a separate file.
+  You can split your readme up into several files if that makes sense. For example, [Alternate Start - Live Another Life](https://www.nexusmods.com/skyrim/mods/9557/?) has a readme for users and documentation for its addon system in a separate file.
 
 That's all, folks! 😀

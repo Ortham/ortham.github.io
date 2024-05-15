@@ -4,7 +4,7 @@ date:   2014-12-16
 excerpt: "Material Design, Polymer’s pitfalls, and interoperability with Jekyll."
 ---
 
-I've (mostly) finished a new design for [LOOT's website](http://loot.github.io). It's something that I've been wanting to do for a while, but I didn't have any firm ideas for a new design. The release of the first beta for LOOT v0.7 changed that, as it has an HTML-based user interface, and that made it possible to easily reflect LOOT's UI in the site design.
+I've (mostly) finished a new design for [LOOT's website](https://loot.github.io). It's something that I've been wanting to do for a while, but I didn't have any firm ideas for a new design. The release of the first beta for LOOT v0.7 changed that, as it has an HTML-based user interface, and that made it possible to easily reflect LOOT's UI in the site design.
 
 LOOT v0.7's UI is based on Google's [Material Design](https://www.google.com/design/spec/material-design/introduction.html) specification, implemented using the elements provided by Google's [Polymer](https://www.polymer-project.org/) project. I decided to stick with using Polymer for the site too, as I had already become familiar with it, though this also introduced some problems that I didn't have to face when using it in a desktop application.
 
@@ -31,7 +31,7 @@ While in general I like Polymer a lot, I'm not a fan of two things:
 
    It is at least easy enough to wrap these elements in a new custom element that maps their members to the standard ones, but that shouldn't be necessary. Still, developer preview and all.
 
-One thing to note is that Polymer only supports the latest version of 'evergreen' browsers, which at time of writing corresponds to ~ 70% of browsers, according to my addition of the statistics on [caniuse.com](http://caniuse.com). 70% isn't great, though feedback suggests that the actual compatibility is much broader, and the percentage will only increase with time. I don't consider this to be an issue, but it can be a deal-breaker depending on your needs.
+One thing to note is that Polymer only supports the latest version of 'evergreen' browsers, which at time of writing corresponds to ~ 70% of browsers, according to my addition of the statistics on [caniuse.com](https://caniuse.com). 70% isn't great, though feedback suggests that the actual compatibility is much broader, and the percentage will only increase with time. I don't consider this to be an issue, but it can be a deal-breaker depending on your needs.
 
 ## Problems, Problems
 
@@ -61,14 +61,14 @@ Internet Explorer 11 also claims SVG support, but doesn't scale SVGs to fit `<im
 
 ### Polymer, Jekyll & Vulcanize
 
-[Bower](http://bower.io/) is recommended for managing your Polymer dependencies, and Polymer provides the [Vulcanize](https://github.com/Polymer/vulcanize) tool to concatenate them for deployment. This concatenation step is recommended for two reasons:
+[Bower](https://bower.io/) is recommended for managing your Polymer dependencies, and Polymer provides the [Vulcanize](https://github.com/Polymer/vulcanize) tool to concatenate them for deployment. This concatenation step is recommended for two reasons:
 
 1. Bower downloads a lot more than just the files that are used by your site. The LOOT website's `bower_components` folder size is over 3 MB, but Vulcanize concatenates 800 KB of dependencies.
 2. Each HTML Import sends another HTTP request, which has overhead. Cutting them down to one import reduced my page loading times by 20%.
 
 This means that the `bower_components` folder and the Vulcanize output file can be added to the repository `.gitignore`. I find that a useful analogy is like how for a compiled language, you'd commit the source files but not the third-party dependencies (in most cases) or binaries.
 
-However, LOOT's site is built using [Jekyll](http://jekyllrb.com/), which lets me write content in Markdown and use layout templates, among other things. GitHub integrate Jekyll support into their hosting, so you just push the site 'source', and they build it. The interplay between this process and Polymer's isn't exactly butter-smooth.
+However, LOOT's site is built using [Jekyll](https://jekyllrb.com/), which lets me write content in Markdown and use layout templates, among other things. GitHub integrate Jekyll support into their hosting, so you just push the site 'source', and they build it. The interplay between this process and Polymer's isn't exactly butter-smooth.
 
 For one, Vulcanize doesn't seem to like Jekyll's `{% raw %}{{ }}{% endraw %}` tags, so I couldn't Vulcanize my page template. Instead, I had to put all my HTML imports into another file, Vulcanize that, and import the Vulcanized file into my page template.
 

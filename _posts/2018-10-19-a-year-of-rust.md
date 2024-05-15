@@ -118,7 +118,7 @@ lifetimes](https://rust-lang.github.io/rfcs/2094-nll.html) are stabilised.
 Self-referential structures remain a pain to write, but they're always a pain to
 write without a garbage collector: Rust just helps the pain happen at compile
 time, and not when you're running in production. [Learning Rust With Entirely
-Too Many Linked Lists](http://cglab.ca/~abeinges/blah/too-many-lists/book/) is a
+Too Many Linked Lists](https://rust-unofficial.github.io/too-many-lists/) is a
 great guide through the difficulty involved, but I think I was lucky that I
 didn't unwittingly try starting with anything that goes against the grain so
 much.
@@ -446,7 +446,7 @@ difficult in the long run. It's another example of Rust pushing you towards
 doing things correctly by default.
 
 Unlike libespm, C++ libloadorder had documentation. It was built using
-[Sphinx](http://www.sphinx-doc.org/en/stable/),
+[Sphinx](https://www.sphinx-doc.org/en/master/),
 [Breathe](https://github.com/michaeljones/breathe) and
 [Doxygen](https://www.stack.nl/~dimitri/doxygen/), from a mix of
 reStructuredText files and header doc comments. In this case, switching to Rust
@@ -686,7 +686,7 @@ of weaknesses. Here are a few that I've encountered.
 ### Building Desktop Graphical User Interfaces
 
 Rust isn't great for building desktop GUIs. The best option I could find was to
-use GTK through [gtk-rs](http://gtk-rs.org/), but I wasn't able to get it to
+use GTK through [gtk-rs](https://gtk-rs.org/), but I wasn't able to get it to
 build on Windows, though it looks like its support for Windows has improved
 since I tried. I somehow missed the [Rust Qt Binding
 Generator](https://phabricator.kde.org/source/rust-qt-binding-generator/), which

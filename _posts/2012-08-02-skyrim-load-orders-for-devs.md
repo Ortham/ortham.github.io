@@ -75,6 +75,6 @@ If either `plugins.txt` or `loadorder.txt` are changed such that the load order 
 
 ## Load Ordering in Your Utility
 
-If you're writing a utility that reads or writes the load order, you will want to follow the above standard, or your utility will end up mangling the load orders set by utilities that do follow the standard, which include [BOSS](https://boss-developers.github.io/), [LOOT](https://loot.github.io/), [Mod Organiser](http://www.nexusmods.com/skyrim/mods/1334/), [Nexus Mod Manager](http://www.nexusmods.com/skyrim/mods/modmanager/), [TES5Edit](http://www.nexusmods.com/skyrim/mods/25859), [Wrye Bash](https://github.com/wrye-bash/wrye-bash) and more.
+If you're writing a utility that reads or writes the load order, you will want to follow the above standard, or your utility will end up mangling the load orders set by utilities that do follow the standard, which include [BOSS](https://boss-developers.github.io/), [LOOT](https://loot.github.io/), [Mod Organiser](https://www.nexusmods.com/skyrim/mods/1334/), [Nexus Mod Manager](https://www.nexusmods.com/skyrim/mods/modmanager/), [TES5Edit](https://www.nexusmods.com/skyrim/mods/25859), [Wrye Bash](https://github.com/wrye-bash/wrye-bash) and more.
 
 You can either write your own implementation, or you can use [libloadorder](https://github.com/Ortham/libloadorder), which provides a C API so it can be loaded as a DLL in many languages. If you want to use libloadorder, either build it yourself, or contact me and I will send you a build (I don't do regular releases for it).

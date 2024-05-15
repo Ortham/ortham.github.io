@@ -26,7 +26,7 @@ In the future, I'd like libbsa to be more of a wrapper itself: there are other B
 
 ## libespm
 
-[libespm](https://github.com/Ortham/libespm) is the Elder Scrolls Plugin (\*.esp) and Elder Scrolls Master (\*.esm) file parser used by libloadorder (covered below) and [LOOT](http://loot.github.io). It's very simplistic, only supporting reading some header fields and record FormIDs, because that's all that is needed of it, but like libbsa the code was a bit gnarly.
+[libespm](https://github.com/Ortham/libespm) is the Elder Scrolls Plugin (\*.esp) and Elder Scrolls Master (\*.esm) file parser used by libloadorder (covered below) and [LOOT](https://loot.github.io). It's very simplistic, only supporting reading some header fields and record FormIDs, because that's all that is needed of it, but like libbsa the code was a bit gnarly.
 
 Libespm was actually the first of the three libraries that I went back to, shortly after I had TDD drummed into my head at work, and it was the perfect size and scope for a TDD-based rewrite. As part of the rewrite, I used C++ streams instead of array pointer arithmetic, which while slightly slower is a heck of a lot less error-prone and easier to read. I also used memory mapping to reduce the performance hit and added Fallout 4 support along the way, not to mention similar build system improvements and Travis CI integration that I later used for libbsa.
 

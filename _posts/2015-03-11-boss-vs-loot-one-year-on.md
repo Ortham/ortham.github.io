@@ -291,7 +291,7 @@ Oblivion's relatively low clone rate will be due to a combination of the communi
 
 ## Masterlist Content
 
-Here are some stats on what is in the masterlists at time of writing. The LOOT stats were obtained by temporarily adding counters to the [Masterlist Search](http://loot.github.io/search) page (which uses GitHub APIs), and the BOSS plugin stats were obtained by counting via regex searches the instances of `^[^:\r\n]+$` and `MOD:` present in the masterlist files.
+Here are some stats on what is in the masterlists at time of writing. The LOOT stats were obtained by temporarily adding counters to the [Masterlist Search](https://loot.github.io/search) page (which uses GitHub APIs), and the BOSS plugin stats were obtained by counting via regex searches the instances of `^[^:\r\n]+$` and `MOD:` present in the masterlist files.
 
 #### LOOT
 
