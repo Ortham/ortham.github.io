@@ -3,7 +3,7 @@ title: My Projects
 permalink: /projects/
 ---
 
-*My game mods and other modding--related projects are listed separately [here](/projects/mods/).*
+*My game mods and other modding--related projects are listed separately [here]({% link _pages/projects/mods.md %}).*
 
 ### Current Projects
 

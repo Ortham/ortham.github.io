@@ -68,4 +68,4 @@ Just remember: be careful when dealing with money or other sensitive information
 
 #### My Bitcoin Address
 
-Anyway, my Bitcoin address as a `bitcoin:` URI, QR code and plain text can be reached by clicking the <a class="fa fa-bitcoin" href="{{ site.bitcoin_url }}"></a> icon in the site header.
+Anyway, my Bitcoin address as a `bitcoin:` URI, QR code and plain text can be found [here]({% link _pages/bitcoin.md %}).

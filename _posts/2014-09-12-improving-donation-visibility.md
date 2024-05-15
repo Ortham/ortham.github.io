@@ -15,7 +15,7 @@ That said, I don't do a very good job of informing people that the donation opti
 
 ![shut up and take my money!](/assets/images/posts/Shut-up-and-take-my-money.jpg)
 
-Given the above, I'll be making donation options more prominent. The PayPal link on my site will be shifted over to the right, and I'll add donation info to my [About](/about/) page and the site footer.
+Given the above, I'll be making donation options more prominent. The PayPal link on my site will be shifted over to the right, and I'll add donation info to my [About]({% link _pages/about.md %}) page and the site footer.
 
 **I'm also going to be adding a PayPal link to LOOT.** Adding a donation link to LOOT is a moral conundrum I've wrestled with for a while, because more that just my work has gone into it. At the end of the day though:
 
