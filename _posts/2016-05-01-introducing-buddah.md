@@ -6,7 +6,7 @@ excerpt: A simple registry for community-made game modding software.
 
 [Buddah](https://ortham.github.io/buddah/) is a new website of mine that provides a searchable registry/list of modding-related software. It's also a [GitHub repository](https://github.com/Ortham/buddah). I've created it to help software developers wanting to write modding-related software find out what already exists, and so avoid reinventing the wheel.
 
-Buddah's design is inspired by the websites for the [NPM](npmjs.com) and [Bower](http://bower.io/) package managers. However, Buddah is not related to any package manager, and it's not a project hosting or publishing site. It's a static site that only stores metadata on the projects it lists, and projects don't need to be "release-ready" to be registered. As stated in the contributing guide, the only requirement is that projects are software related modding a game. They can be for any game, open or closed source, and in any state of completion.
+Buddah's design is inspired by the websites for the [NPM](https://www.npmjs.com) and [Bower](http://bower.io/) package managers. However, Buddah is not related to any package manager, and it's not a project hosting or publishing site. It's a static site that only stores metadata on the projects it lists, and projects don't need to be "release-ready" to be registered. As stated in the contributing guide, the only requirement is that projects are software related modding a game. They can be for any game, open or closed source, and in any state of completion.
 
 ## The Past
 
@@ -16,7 +16,7 @@ To that end, I decided to create a simple Markdown list of known Elder Scrolls (
 
 As I added to the list, I noticed that some projects could be listed under multiple headings. To avoid repeating entries, I reimplemented the list as a JSON dataset, with each project entry listing the sections it should appear under, and used the dataset to construct and display the list on a web page hosted using GitHub Pages (much like this site is).
 
-It then became apparent that there were quite a few more projects out there than I had thought, and the list was becoming too long to browse comfortably. I therefore switched to a search-based UI, where the section names became keywords, very similar to the current implementation. Searching is implemented [lunr.js](lunrjs.com) to provide relevance weighting.
+It then became apparent that there were quite a few more projects out there than I had thought, and the list was becoming too long to browse comfortably. I therefore switched to a search-based UI, where the section names became keywords, very similar to the current implementation. Searching is implemented [lunr.js](https://lunrjs.com) to provide relevance weighting.
 
 At this point, the site was still called ES Modding Tools, which was appropriate but not terribly snappy. Then I woke up one morning with two thoughts: firstly, that there wasn't any need to restrict the site to only Elder Scrolls and Fallout modding software, and secondly, that I was essentially building a list of links, and so I could hardly do better than to name it after Buddah.
 

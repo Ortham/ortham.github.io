@@ -22,10 +22,10 @@ This post is therefore about using mods more like a newbie would, then using my 
 
 After almost 153 hours on one character (a Wizard-turned-battlemage), I decided to start over with a warrior, whom I named Teflon the Tall. *Yes, I'm rubbish with names.* I'd previously only used the following mods, which I consider essential to every playthrough.
 
-1. [Unofficial Skyrim Patch](www.nexusmods.com/skyrim/mods/19/)
-2. [Unofficial Dragonborn Patch](www.nexusmods.com/skyrim/mods/31083/)
-3. [Skyrim Script Extender](skse.silverlock.org)
-4. [SkyUI](www.nexusmods.com/skyrim/mods/3863/)
+1. [Unofficial Skyrim Patch](https://www.nexusmods.com/skyrim/mods/19/)
+2. [Unofficial Dragonborn Patch](https://www.nexusmods.com/skyrim/mods/31083/)
+3. [Skyrim Script Extender](https://skse.silverlock.org)
+4. [SkyUI](https://www.nexusmods.com/skyrim/mods/3863/)
 
 These were installed manually, apart from SkyUI, which I installed through the Steam Workshop.
 
@@ -45,7 +45,7 @@ These mods are those I already know that I wouldn't play without (unless somethi
 * [Climates of Tamriel](http://www.nexusmods.com/skyrim/mods/17802/?): It gives me darker nights. I've never had a problem with Skyrim's weather though, so this may be overkill.
 * [Realistic Lighting Overhaul](http://www.nexusmods.com/skyrim/mods/30450/?): This fixes dungeons to be dark where there are no light sources, which got me hacked to pieces in the dark on my first dungeon crawl. I also like the changes it makes to the lighting in the rest of the game, it feels that much more atmospheric.
   * [Wearable Lanterns](http://www.nexusmods.com/skyrim/mods/17416): After my first death, I bought myself one of these, then went back to the cave. I lasted a few seconds longer...
-* [Frostfall - Hypothermia Camping Survival](forums.bethsoft.com/topic/1509561-frostfall/): Environmental gameplay mechanics!
+* [Frostfall - Hypothermia Camping Survival](https://forums.bethsoft.com/topic/1509561-frostfall/): Environmental gameplay mechanics!
   * [Cloaks of Skyrim](http://www.nexusmods.com/skyrim/mods/12092/?): Makes up for the lack of warm clothing in vanilla.
   * [Winter Is Coming - Cloaks](http://www.nexusmods.com/skyrim/mods/13486): Just as good as the above, so why not use both?
 * [Lock Overhaul](http://www.nexusmods.com/skyrim/mods/29979/): Adds lock bashing, which is sorely needed by my warrior. I like how all it involves is swinging at the lock until a success sound plays or I get an "it's too tough" message in the corner of my screen. However, script lag makes the experience into cause, pause and effect, and the volume of the success sound makes the preceding action seem too quiet.
@@ -57,7 +57,7 @@ These mods are those I already know that I wouldn't play without (unless somethi
 * [W.A.T.E.R. - Water and Terrain Enhancement Redux](http://www.nexusmods.com/skyrim/mods/13268/?): The water looks better, but I don't think there's much wrong with vanilla water.
 * [Wet and Cold - Holidays](http://www.nexusmods.com/skyrim/mods/51472/): A wonderful little mod, adds a little vibrancy and cheer to the game. It requires [Wet and Cold](http://www.nexusmods.com/skyrim/mods/27563/?), which I'm not really interested in, and for consistency I also use [Wet and Cold - Ashes](http://www.nexusmods.com/skyrim/mods/31968/?).
 * [Run For Your Lives](http://www.nexusmods.com/skyrim/mods/23906/?): The appropriate response when meeting a dragon is, after all, to run screaming.
-* [Open Faced Guard Helmets](skyrim.nexusmods.com/mods/9514): It's slightly creepy how you can't otherwise see their eyes...
+* [Open Faced Guard Helmets](https://skyrim.nexusmods.com/mods/9514): It's slightly creepy how you can't otherwise see their eyes...
 * [Immersive Armors](http://www.nexusmods.com/skyrim/mods/19733): More armour varieties, I've already picked up a cool painted shield.
 * [Unique Uniques](http://www.nexusmods.com/skyrim/mods/33292/?): More unique gear is usually a good thing.
 * [Falskaar](http://www.nexusmods.com/skyrim/mods/37994/?): A quest mod everyone has gone crazy for.
@@ -78,7 +78,7 @@ Preferably, diseases would progress, sapping my stats until I'm useless in a fig
 
 With my mods chosen, I then had to decide how to install and manage them. I'd found all my mods, bar SkyUI, browsing Skyrim Nexus' Top Files list, so downloading them from there using the managed option was an obvious choice.
 
-Now, maybe the newbie thing to do would have been to install the [Nexus Mod Manager](http://www.nexusmods.com/skyrim/mods/modmanager/?) (NMM), but I went with [Mod Organiser](www.nexusmods.com/skyrim/mods/1334/) (MO) instead, because:
+Now, maybe the newbie thing to do would have been to install the [Nexus Mod Manager](http://www.nexusmods.com/skyrim/mods/modmanager/?) (NMM), but I went with [Mod Organiser](https://www.nexusmods.com/skyrim/mods/1334/) (MO) instead, because:
 
 1. It's very popular.
 2. It supports the same managed download system as NMM.
@@ -86,7 +86,7 @@ Now, maybe the newbie thing to do would have been to install the [Nexus Mod Mana
 
 The other major mod manager is [Wrye Bash](http://www.nexusmods.com/skyrim/mods/1840/?). I decided not to use it to manage my mods because it has an (undeserved) reputation of being very complicated to use, so probably wouldn't be an attractive choice for newbies. I still use it to build a Bashed Patch though, as that is an indispensible aid to resolving compatibility issues.
 
-MO bundles its own fork of [LOOT](loot.github.io) v0.5, but I decided to use LOOT's latest snapshot build instead. I wouldn't recommend this in general, as such builds aren't stable, but my terribly biased opinion is that it's a big improvement.
+MO bundles its own fork of [LOOT](https://loot.github.io) v0.5, but I decided to use LOOT's latest snapshot build instead. I wouldn't recommend this in general, as such builds aren't stable, but my terribly biased opinion is that it's a big improvement.
 
 Having chosen my mod utilities, I downloaded and ran MO's installer. I already had copies of Wrye Bash and LOOT installed, so I just added them to MO's list of applications. I had to use the debug batch file for Wrye Bash, as MO doesn't recognise Python files as being executable, but a newbie would probably grab the Standalone executable version of Wrye Bash anyway.
 
@@ -144,7 +144,7 @@ You might disagree with the short-cuts I've taken in this article, but I'm hardl
 * Package your mods so that they can be installed simply. BAIN-ready archives are easy to make and easy to use. If your mod has optional components, including an install script (BAIN Wizard and/or FOMOD) provides a really smooth install experience.
 * **Include a readme.** A good readme includes everything useful to know about a mod. If the sites it's hosted on disappeared, would people still know what it does, how to use it, who made it, and so on?
 
-  I'd recommend writing readmes using [Markdown](http://daringfireball.net/projects/markdown/syntax) syntax in a `.txt` file, which provides a formatted readme that is readable anywhere, and which can be auto-converted into a more stylish HTML or PDF file using free tools such as [Pandoc](johnmacfarlane.net/pandoc/).
+  I'd recommend writing readmes using [Markdown](http://daringfireball.net/projects/markdown/syntax) syntax in a `.txt` file, which provides a formatted readme that is readable anywhere, and which can be auto-converted into a more stylish HTML or PDF file using free tools such as [Pandoc](https://johnmacfarlane.net/pandoc/).
 
   ![Markdown](/assets/images/posts/markdown.png)
   *This very article is written in Markdown.*
