@@ -25,8 +25,10 @@ The release download numbers can be obtained using GitHub's Releases API, eg.
         {label: "LOOT v0.6.1", value:  2566, name: 'loot'},
     ];
 
+    var parentWidth = document.getElementById('averageDailyClones').parentElement.offsetWidth;
+
     var margin = {top: 20, right: 30, bottom: 30, left: 50},
-        width = 768 - margin.left - margin.right,
+        width = parentWidth - margin.left - margin.right,
         height = 250 - margin.top - margin.bottom;
 
     var x = d3.scale.ordinal()
@@ -80,12 +82,12 @@ Masterlist contributions are a useful metric because they give some insight into
 #### LOOT Masterlists Line Difference
 
 <svg id="commits" class="chart">
-    <g class="legend" transform="translate(550, 20)">
-        <rect class="bar positive loot" width="175" height="30"/>
+    <g id="commits-legend" class="legend">
+        <rect class="bar positive loot" width="125" height="30"/>
         <text dy=".71em" x="10" y="10">LOOT (2014-2015)</text>
-        <rect class="bar positive boss" width="175" height="30" y="30"/>
+        <rect class="bar positive boss" width="125" height="30" y="30"/>
         <text dy=".71em" x="10" y="40">BOSS (2014-2015)</text>
-        <rect class="bar positive boss-previous" width="175" height="30" y="60"/>
+        <rect class="bar positive boss-previous" width="125" height="30" y="60"/>
         <text dy=".71em" x="10" y="70" style="fill:black">BOSS (2013-2014)</text>
     </g>
 </svg>
@@ -110,8 +112,10 @@ Masterlist contributions are a useful metric because they give some insight into
         {label: "Fallout: New Vegas", value: 787}, // LOOT
     ];
 
+    var parentWidth = document.getElementById('commits').parentElement.offsetWidth;
+
     var margin = {top: 20, right: 30, bottom: 30, left: 60},
-        width = 768 - margin.left - margin.right,
+        width = parentWidth - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
 
     var x = d3.scale.ordinal()
@@ -146,45 +150,48 @@ Masterlist contributions are a useful metric because they give some insight into
       .attr("class", "y axis")
       .call(yAxis);
 
-      function getXPos(d, i) {
-          if (i < 3) {
-              i = i;
-          } else if (i < 6) {
-              i -= 3;
-          } else if (i < 9) {
-              i -= 6;
-          } else if (i < 12) {
-              i -= 9;
-          }
-          return x(d.label) + i * x.rangeBand() / 3;
-      }
+    d3.select('#commits-legend')
+      .attr("transform", "translate(" + (parentWidth - 175) + "," + margin.top + ")");
 
-      function getClass(d, i) {
-          if (i < 3) {
-              i = i;
-          } else if (i < 6) {
-              i -= 3;
-          } else if (i < 9) {
-              i -= 6;
-          } else if (i < 12) {
-              i -= 9;
-          }
+    function getXPos(d, i) {
+        if (i < 3) {
+            i = i;
+        } else if (i < 6) {
+            i -= 3;
+        } else if (i < 9) {
+            i -= 6;
+        } else if (i < 12) {
+            i -= 9;
+        }
+        return x(d.label) + i * x.rangeBand() / 3;
+    }
 
-          var name = 'bar';
-          if (d.value < 0) {
-              name += ' negative';
-          } else {
-              name += ' positive';
-          }
-          if (i == 2) {
-              name += ' loot';
-          } else if (i == 1) {
-              name += ' boss';
-          } else if (i == 0) {
-              name += ' boss-previous';
-          }
-          return name;
-      }
+    function getClass(d, i) {
+        if (i < 3) {
+            i = i;
+        } else if (i < 6) {
+            i -= 3;
+        } else if (i < 9) {
+            i -= 6;
+        } else if (i < 12) {
+            i -= 9;
+        }
+
+        var name = 'bar';
+        if (d.value < 0) {
+            name += ' negative';
+        } else {
+            name += ' positive';
+        }
+        if (i == 2) {
+            name += ' loot';
+        } else if (i == 1) {
+            name += ' boss';
+        } else if (i == 0) {
+            name += ' boss-previous';
+        }
+        return name;
+    }
 
     chart.selectAll(".bar")
       .data(data)
@@ -230,8 +237,10 @@ LOOT masterlist repository clones are a useful metric as when LOOT initially dow
         {label: "Fallout: New Vegas", value:  236},
     ];
 
+    var parentWidth = document.getElementById('averageDailyClones').parentElement.offsetWidth;
+
     var margin = {top: 20, right: 30, bottom: 30, left: 50},
-        width = 768 - margin.left - margin.right,
+        width = parentWidth - margin.left - margin.right,
         height = 300 - margin.top - margin.bottom;
 
     var x = d3.scale.ordinal()
