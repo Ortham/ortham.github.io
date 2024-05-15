@@ -151,4 +151,4 @@ You might disagree with the short-cuts I've taken in this article, but I'm hardl
 
   You can split your readme up into several files if that makes sense. For example, [Alternate Start - Live Another Life](http://www.nexusmods.com/skyrim/mods/9557/?) has a readme for users and documentation for its addon system in a separate file.
 
-That's all, folks! :grinning:
+That's all, folks! 😀
