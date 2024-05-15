@@ -94,7 +94,10 @@ sudo ukify genkey \
     --secureboot-private-key /root/secure-boot.key \
     --secureboot-certificate /root/secure-boot.crt
 
-sudo openssl x509 -outform DER -in /root/secure-boot.crt -out /boot/efi/MOK.cer
+sudo openssl x509 \
+    -outform DER \
+    -in /root/secure-boot.crt \
+    -out /boot/efi/MOK.cer
 ```
 
 The `openssl` command is needed because the certificate needs to be DER-encoded to be trusted by Secure Boot.
@@ -184,7 +187,11 @@ sudo cp -f /boot/efi/EFI/fedora/shimx64.efi /boot/efi/EFI/BOOT/BOOTX64.EFI
 sudo mv /boot/efi/EFI/fedora/grubx64.efi /boot/efi/EFI/fedora/grubx64.efi.bak
 sudo cp /boot/efi/EFI/systemd/systemd-bootx64.efi /boot/efi/EFI/fedora/grubx64.efi
 
-sudo sbsign --key /root/secure-boot.key --cert /root/secure-boot.crt --output /boot/efi/EFI/fedora/grubx64.efi /boot/efi/EFI/fedora/grubx64.efi
+sudo sbsign \
+    --key /root/secure-boot.key \
+    --cert /root/secure-boot.crt \
+    --output /boot/efi/EFI/fedora/grubx64.efi \
+    /boot/efi/EFI/fedora/grubx64.efi
 ```
 
 That sets up `systemd-boot` and makes UEFI boot directly to it, which we then undo so that the shim gets loaded, and we replace GRUB with `systemd-boot` so that the shim loads the latter, and we sign the renamed `systemd-boot` EFI file using the MOK that we already enrolled so that the shim trusts it.
@@ -234,7 +241,12 @@ In my testing I found that changing the kernel image caused PCRs 4, 9, 10 and 11
 You can set up TPM + PIN decryption with PCR bindings in a single command by running:
 
 ```sh
-sudo systemd-cryptenroll --wipe-slot tpm2 --tpm2-device auto --tpm2-pcrs="7+12+13+14" --tpm2-with-pin true /dev/sda3
+sudo systemd-cryptenroll \
+    --wipe-slot tpm2 \
+    --tpm2-device auto \
+    --tpm2-pcrs="7+12+13+14" \
+    --tpm2-with-pin true \
+    /dev/sda3
 ```
 
 `/dev/sda3` was the partition that my LUKS volume was in, which I found by running `lsblk`. Although I'm interested in PCR 11, it is omitted because it relies on some additional setup and because I encountered some issues using it: more on that later.
