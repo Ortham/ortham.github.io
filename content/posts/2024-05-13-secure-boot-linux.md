@@ -2,6 +2,9 @@
 title: Replicating Bitlocker on Fedora 40
 date: 2024-05-13
 summary: A walkthrough of setting up a (mostly) working (roughly) equivalent to Bitlocker.
+categories:
+   - Linux
+   - Security
 aliases:
   - /2024/05/13/secure-boot-linux.html
 ---

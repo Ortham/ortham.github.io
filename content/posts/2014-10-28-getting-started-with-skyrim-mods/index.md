@@ -3,9 +3,7 @@ title:  "Skyrim Mods: The Lazy Way"
 date:   2014-10-28
 summary: "Mods? In my game? It's easier than you think."
 categories:
-  - Skyrim
   - modding
-  - guide
 aliases:
   - /skyrim/modding/guide/2014/10/28/getting-started-with-skyrim-mods.html
 ---

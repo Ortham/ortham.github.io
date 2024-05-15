@@ -2,6 +2,8 @@
 title:  "LOOT v0.7.0: Sorting Improvements"
 date:   2015-05-23
 summary: "A look at the sorting improvements made since v0.6."
+categories:
+   - LOOT
 aliases:
   - /2015/05/23/loot-v0.7-sorting.html
 params:

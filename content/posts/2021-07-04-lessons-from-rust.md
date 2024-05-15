@@ -2,6 +2,8 @@
 title: Lessons from Rust
 date: 2021-07-04
 summary: Using constraints to write code that can only do what you want.
+categories:
+   - Rust
 aliases:
   - /2021/07/04/lessons-from-rust.html
 ---

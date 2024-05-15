@@ -4,7 +4,6 @@ date:   2015-04-23
 lastmod: 2015-04-28
 summary: "My thoughts on the matter."
 categories:
-  - Skyrim
   - modding
 aliases:
   - /skyrim/modding/2015/04/23/paid-mods-the-end.html

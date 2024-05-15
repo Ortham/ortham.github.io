@@ -2,6 +2,8 @@
 title:  A Year of Rust
 date:   2018-10-19
 summary: Why I chose to learn Rust, the benefits that it's brought to my projects, and some of its weaknesses.
+categories:
+   - Rust
 aliases:
   - /2018/10/19/a-year-of-rust.html
 params:

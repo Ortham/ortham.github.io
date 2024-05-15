@@ -2,6 +2,9 @@
 title: LOOT on Linux
 date: 2023-11-15
 summary: Going from tests passing on CI to distribution on Flathub.
+categories:
+   - LOOT
+   - Linux
 aliases:
   - /2023/11/15/loot-on-linux.html
 ---

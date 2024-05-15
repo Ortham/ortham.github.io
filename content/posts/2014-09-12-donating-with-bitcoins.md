@@ -5,8 +5,6 @@ lastmod: 2014-09-13
 summary: "A guided adventure into the unknown."
 categories:
   - site
-  - update
-  - donations
 aliases:
   - /site/update/donations/2014/09/12/donating-with-bitcoins.html
 ---

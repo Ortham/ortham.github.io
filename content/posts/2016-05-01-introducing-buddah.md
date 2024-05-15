@@ -2,6 +2,8 @@
 title:  "Introducing Buddah"
 date:   2016-05-01
 summary: A simple registry for community-made game modding software.
+categories:
+   - modding
 aliases:
   - /2016/05/01/introducing-buddah.html
 ---

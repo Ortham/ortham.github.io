@@ -2,6 +2,8 @@
 title:  "LOOT v0.7.0: User Interface Overhaul"
 date:   2015-05-22
 summary: "Exploring the major UI changes since v0.6."
+categories:
+   - LOOT
 aliases:
   - /2015/05/22/loot-v0.7-ui.html
 ---

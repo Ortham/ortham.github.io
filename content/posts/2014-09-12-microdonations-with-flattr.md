@@ -4,8 +4,6 @@ date:   2014-09-12
 summary: "May be simpler for donors, though PayPal has better rates."
 categories:
   - site
-  - update
-  - donations
 aliases:
   - /site/update/donations/2014/09/12/microdonations-with-flattr.html
 ---

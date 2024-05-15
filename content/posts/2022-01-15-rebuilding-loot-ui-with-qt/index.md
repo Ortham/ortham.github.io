@@ -2,6 +2,9 @@
 title: Reimplementing LOOT's user interface with Qt
 date: 2022-01-15
 summary: Faster, leaner and (hopefully!) more maintainable.
+categories:
+   - LOOT
+   - Qt
 aliases:
   - /2022/01/15/rebuilding-loot-ui-with-qt.html
 ---

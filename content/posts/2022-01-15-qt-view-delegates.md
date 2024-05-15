@@ -2,6 +2,8 @@
 title: Custom interactive list elements with Qt
 date: 2022-01-15
 summary: It's more difficult than you might think.
+categories:
+   - Qt
 aliases:
   - /2022/01/15/qt-view-delegates.html
 ---

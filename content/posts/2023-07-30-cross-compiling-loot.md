@@ -2,6 +2,8 @@
 title: Cross-compiling LOOT
 date: 2023-07-30
 summary: For Windows, from Linux.
+categories:
+   - LOOT
 aliases:
   - /2023/07/30/cross-compiling-loot.html
 ---

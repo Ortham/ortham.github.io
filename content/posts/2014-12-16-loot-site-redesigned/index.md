@@ -2,6 +2,8 @@
 title:  "LOOT’s Site Redesigned"
 date:   2014-12-16
 summary: "Material Design, Polymer’s pitfalls, and interoperability with Jekyll."
+categories:
+   - LOOT
 aliases:
   - /2014/12/16/loot-site-redesigned.html
 ---

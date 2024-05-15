@@ -2,6 +2,9 @@
 title: Horizontal text in themeable vertical tabs with Qt
 date: 2022-01-15
 summary: An apparently unsolved problem.
+categories:
+   - LOOT
+   - Qt
 aliases:
   - /2022/01/15/qt-vertical-tabs.html
 ---

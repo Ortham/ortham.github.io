@@ -2,6 +2,9 @@
 title: Styling and desktop scaling with Qt
 date: 2023-03-04
 summary: A few more problems I encountered while building a user interface with Qt
+categories:
+   - LOOT
+   - Qt
 aliases:
   - /2023/03/04/qt-styling-and-desktop-scaling.html
 ---

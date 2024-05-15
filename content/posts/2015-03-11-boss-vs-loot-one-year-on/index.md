@@ -2,6 +2,8 @@
 title:  "BOSS vs. LOOT In Numbers"
 date:   2015-03-11
 summary: "Analysing the stats, one year on."
+categories:
+   - LOOT
 aliases:
   - /2015/03/11/boss-vs-loot-one-year-on.html
 params:

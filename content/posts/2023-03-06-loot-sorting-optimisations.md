@@ -2,6 +2,8 @@
 title: LOOT v0.19.0 Sorting Optimisations
 date: 2023-03-07
 summary: Over 246 times faster than the previous release!
+categories:
+   - LOOT
 aliases:
   - /2023/03/07/loot-sorting-optimisations.html
 params:

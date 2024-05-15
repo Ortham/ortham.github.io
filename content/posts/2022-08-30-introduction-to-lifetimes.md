@@ -2,6 +2,8 @@
 title: An introduction to lifetimes
 date: 2022-08-30
 summary: Resource management, why it matters, and a few helpful concepts.
+categories:
+   - Rust
 aliases:
   - /2022/08/30/introduction-to-lifetimes.html
 ---

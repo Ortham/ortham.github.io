@@ -2,6 +2,8 @@
 title: Deprecating Polymer in LOOT
 date: 2018-10-18
 summary: Closing a chapter in LOOT's GUI development.
+categories:
+   - LOOT
 aliases:
   - /2018/10/18/deprecating-polymer-in-loot.html
 ---

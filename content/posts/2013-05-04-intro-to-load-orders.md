@@ -3,12 +3,7 @@ title:  "Introduction to Load Orders"
 date:   2013-05-04
 summary: "Getting to grips with load orders in TES IV: Oblivion, TES V: Skyrim, Fallout 3 and Fallout: New Vegas."
 categories:
-  - Oblivion
-  - Skyrim
-  - Fallout 3
-  - Fallout New Vegas
-  - load order
-  - guide
+  - modding
 aliases:
   - /oblivion/skyrim/fallout 3/fallout new vegas/load order/guide/2013/05/04/intro-to-load-orders.html
 ---

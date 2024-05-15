@@ -4,9 +4,6 @@ date:   2014-09-12
 summary: "Upcoming changes to raise user awareness."
 categories:
   - site
-  - update
-  - donations
-  - LOOT
 aliases:
   - /site/update/donations/loot/2014/09/12/improving-donation-visibility.html
 ---

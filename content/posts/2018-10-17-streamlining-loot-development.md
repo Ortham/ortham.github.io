@@ -2,6 +2,8 @@
 title:  Streamlining LOOT development
 date:   2018-10-17
 summary: Rebuilding the LOOT application on top of its library.
+categories:
+   - LOOT
 aliases:
   - /2018/10/17/streamlining-loot-development.html
 ---
