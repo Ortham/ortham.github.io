@@ -15,7 +15,7 @@ The syntax extensions are:
 
 Usage is simple, there's a single C-like compare function:
 
-```
+```c++
 #include <pseudosem.h>
 #include <iostream>
 
