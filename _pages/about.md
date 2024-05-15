@@ -22,8 +22,8 @@ elsewhere, particularly within the Elder Scrolls modding community. I got the
 latter name from the last line of
 [this](https://www.youtube.com/watch?v=V2jDTufS5WY) Orange advert. It's not a
 great ad, but for some reason the last two words stuck in my head long after I'd
-totally forgotten about the rest of it. My avatar is Dan McNinja, from [The
-Adventures of Dr. McNinja](http://drmcninja.com/). I can't remember why he has
+totally forgotten about the rest of it. My avatar is Dan McNinja, from *The
+Adventures of Dr. McNinja*. I can't remember why he has
 knives taped to his face, but it's a suitably silly image that Chris Hastings
 was gracious enough to let me use.
 
