@@ -20,7 +20,7 @@ Fast-forward to 2016, almost three years later, and there is now interest in add
 
 Unfortunately, while my new tests pass on my Windows development computer, they fail on Travis and my Ubuntu VM due to a zlib buffer error that has me stumped. I'm also aware that the tests don't cover many usage cases, and so I'll need to work on that.
 
-In parallel to this work, @matortheeternal has been writing a CLI wrapper to make it easier for code written in other languages to make use of libbsa, and I'll be merging that in when it's done.
+In parallel to this work, [matortheeternal](https://github.com/matortheeternal) has been writing a CLI wrapper to make it easier for code written in other languages to make use of libbsa, and I'll be merging that in when it's done.
 
 In the future, I'd like libbsa to be more of a wrapper itself: there are other BSA-handling codebases around that provide more extensive support for the BSA (and BA2) file format, and though they're generally undocumented and without tests, it may be better to wrap around them than reimplement the support within libbsa itself.
 
