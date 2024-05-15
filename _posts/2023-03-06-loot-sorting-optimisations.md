@@ -164,7 +164,7 @@ flowchart LR
         e1([early1.esp])
         e2([early2.esp])
     end
-    subgraph default
+    subgraph "default"
         d1([default1.esp])
         d2([default2.esp])
     end
