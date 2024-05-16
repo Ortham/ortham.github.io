@@ -1,5 +1,9 @@
 ---
+params:
+  groupByYear: true
 cascade:
   params:
-    show_reading_time: true
+    showDate: true
+    showDateUpdated: true
+    showReadingTime: true
 ---

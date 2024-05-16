@@ -1,3 +1,0 @@
-# Override the text that Ananke uses for the table of contents heading it generates.
-[whatsInThis]
-other = "Table of Contents"

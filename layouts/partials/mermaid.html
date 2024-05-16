@@ -1,4 +1,51 @@
 <script type="module">
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.8.0/+esm';
-mermaid.initialize({ startOnLoad: true, theme: 'light' });
+
+/* Adapted from https://github.com/mermaid-js/mermaid/issues/1945#issuecomment-1661264708, with additions for compatibility with the congo theme's toggle */
+const ELEMENT_SELECTOR = '.mermaid'
+const THEME_PREF_STORAGE_KEY = "appearance";
+
+function saveOriginalData() {
+    const elements = document.querySelectorAll(ELEMENT_SELECTOR);
+    for (const element of elements) {
+        element.setAttribute('data-original-code', element.innerHTML)
+    }
+}
+
+function resetProcessed() {
+    const elements = document.querySelectorAll(ELEMENT_SELECTOR);
+    for (const element of elements) {
+        if (element.getAttribute('data-original-code') !== null) {
+            element.removeAttribute('data-processed');
+            element.innerHTML = element.getAttribute('data-original-code');
+        }
+    }
+}
+
+function initialiseMermaid(theme) {
+    mermaid.initialize({ startOnLoad: true, theme });
+    mermaid.init({theme}, document.querySelectorAll('.mermaid'));
+}
+
+function getInitialTheme() {
+    return document.documentElement.classList.contains("dark") ? 'dark' : 'light';
+}
+
+function initialize() {
+    saveOriginalData();
+    initialiseMermaid(getInitialTheme());
+
+    const switchers = document.querySelectorAll("[id^='appearance-switcher']");
+    switchers.forEach(e => e.addEventListener('click', () => {
+        resetProcessed();
+        const theme = mermaid.mermaidAPI.getConfig().theme === 'dark' ? 'light' : 'dark';
+        initialiseMermaid(theme);
+    }));
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener('DOMContentLoaded', initialize);
+} else {
+    initialize();
+}
 </script>

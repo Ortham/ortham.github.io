@@ -1,7 +1,6 @@
 ---
 title: "Miscellaneous Projects"
 summary: Libraries and small utilities
-type: page
 ---
 
 Here are a few things I wrote because I needed them, and shared because other people may need them too.

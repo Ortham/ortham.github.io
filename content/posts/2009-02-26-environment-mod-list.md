@@ -7,7 +7,7 @@ categories:
 aliases:
   - /mods/modding/oblivion/lists/2009/02/26/environment-mod-list.html
 params:
-  toc: true
+  showTableOfContents: true
 ---
 
 ## Introduction

@@ -1,5 +1,7 @@
 ---
 title: Bitcoin Donations
+params:
+    showPagination: false
 ---
 
 Please don't send me Bitcoin! If you want to donate, consider doing so through

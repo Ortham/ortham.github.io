@@ -1,7 +1,6 @@
 ---
 title: "Game Modding Projects"
 summary: Utilities, docs, libraries and mods for various Elder Scrolls and Fallout games
-type: page
 ---
 
 I've been involved in modding Bethesda's Elder Scrolls and Fallout games since 2007. Thousands of hours later, here's what I've created or contributed to.

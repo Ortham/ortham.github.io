@@ -1,0 +1,4 @@
+<!-- This needs to run at the end of the body as hasMermaid is set while rendering the body. -->
+{{ if .Store.Get "hasMermaid" }}
+{{ partialCached "mermaid.html" . }}
+{{ end }}

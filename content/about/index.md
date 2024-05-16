@@ -1,5 +1,7 @@
 ---
 title: About
+params:
+    showPagination: false
 ---
 
 ### Me
@@ -34,7 +36,7 @@ organising them, so I don't do it enough.
 ### This Site
 
 This site is generated using [Hugo](https://gohugo.io/), uses the
-[Ananke](https://github.com/theNewDynamic/gohugo-theme-ananke) theme, and is
+[Congo](https://github.com/jpanther/congo) theme, and is
 hosted on [GitHub](https://github.com/Ortham/Ortham.github.io). It's
 where I put anything that's probably too long to make a forum post, so is mostly
 related to the software projects I work on.

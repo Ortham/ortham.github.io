@@ -87,10 +87,14 @@ article > table td:not(:first-child) {
 }
 
 /* Theme styling override */
-pre {
-    overflow: auto;
+.max-w-prose {
+    max-width: 75ch;
+}
+.toc {
+    max-height: inherit;
+    position: relative;
+    top: 0;
 }
 pre.mermaid {
-    /* Assuming light theme */
     background-color: inherit;
 }

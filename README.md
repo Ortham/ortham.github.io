@@ -8,10 +8,8 @@ Hugo will create the generated site in the `public` folder.
 
 ## Theme-specific features
 
-Some features rely on theme-specific params, configuration or partial templates. They are:
+Some features rely on theme-specific params, configuration or partial templates:
 
-- `i18n/en.toml` is used to override the text that the theme displays for its generated tables of contents.
-- `layouts/partials/site-scripts.html` is used to insert content into the page `<head>`.
-- `params.ananke_socials` is used to configure the "social" links that get displayed by the theme in the header and footer.
-- `parms.show_reading_time` in post front matters is used to control whether a reading time estimate is shown for that post. It's currently cascaded down to all posts.
-- `params.toc` in post front matters is used to control whether a table of contents is generated for that post.
+- `assets/css/custom.css`, `assets/icons/paypal.svg`, `layouts/partials/extend-footer.html` and `layouts/partials/extend-head.html` are loaded by the theme.
+- `params.showPagination`, `params.groupByYear`, `params.showDate`, `params.showDateUpdated`, `params.showReadingTime` and `params.showTableOfContents` are used by the theme's layouts.
+- There are several theme-specific settings in `hugo.toml`.

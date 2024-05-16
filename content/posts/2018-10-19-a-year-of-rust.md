@@ -7,7 +7,7 @@ categories:
 aliases:
   - /2018/10/19/a-year-of-rust.html
 params:
-  toc: true
+  showTableOfContents: true
 ---
 
 In the spring of 2017, I decided to learn another programming language that I
