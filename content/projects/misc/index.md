@@ -1,38 +1,30 @@
 ---
-title: "My Projects"
-layout: single
+title: "Miscellaneous Projects"
+summary: Libraries and small utilities
 type: page
 ---
 
-*My game mods and other modding--related projects are listed separately [here]({{< ref "/projects/mods" >}}).*
-
-## Current Projects
-
-I'm currently working on [LOOT](https://loot.github.io) and various related libraries.
-
-## Miscellaneous
-
 Here are a few things I wrote because I needed them, and shared because other people may need them too.
 
-### svg_to_ico
+## svg_to_ico
 
 [GitHub](https://github.com/Ortham/svg_to_ico)
 
 As the name suggests, a CLI utility and Rust library for converting an SVG file into an ICO file. I use it to generate icons for LOOT's and Yore's executables.
 
-### Pseudosem
+## Pseudosem
 
 [GitHub](https://github.com/Ortham/pseudosem)
 
 A C++11 header-only library for comparison of version strings, following the [Semantic Versioning](https://semver.org) specification and featuring support for a wider variety of version syntaxes.
 
-### Jed Gettext Parser
+## Jed Gettext Parser
 
 [GitHub](https://github.com/Ortham/jed-gettext-parser)
 
 A Javascript Gettext MO file parser that outputs [Jed](https://slexaxton.github.io/Jed/)-compatible data, and which can be run in browser and Node environments.
 
-### MARS
+## MARS
 
 [GitHub](https://github.com/Ortham/mars)
 

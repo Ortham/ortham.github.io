@@ -1,5 +1,6 @@
 ---
-title: "My Projects: Game Mods & Code"
+title: "Game Modding Projects"
+summary: Utilities, docs, libraries and mods for various Elder Scrolls and Fallout games
 type: page
 ---
 
