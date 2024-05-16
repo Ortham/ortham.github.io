@@ -43,17 +43,6 @@ small.portrait {
     fill: steelblue;
 }
 
-.axis text {
-    font: 0.6em sans-serif;
-}
-
-.axis path,
-.axis line {
-    fill: none;
-    stroke: #000;
-    shape-rendering: crispEdges;
-}
-
 .x.axis path {
     display: none;
 }
@@ -62,9 +51,8 @@ small.portrait {
     opacity: 0;
 }
 .legend text {
-    fill: white;
-    font: 0.6em sans-serif;
-    text-anchor:left;
+    fill: currentColor;
+    text-anchor: left;
 }
 .loot {
     opacity: 1;
@@ -97,4 +85,7 @@ article > table td:not(:first-child) {
 }
 pre.mermaid {
     background-color: inherit;
+}
+#averageDailyDownloadsChart, #commitsChart, #averageDailyClonesChart {
+    min-width: 400px;
 }

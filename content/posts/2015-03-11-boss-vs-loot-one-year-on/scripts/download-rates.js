@@ -1,55 +1,53 @@
-(function(){
-    var data = [
-        {label: "BOSS v2.2.0", value: 3788, name: 'boss'},
-        {label: "LOOT v0.5.0", value: 1206, name: 'loot'},
-        {label: "BOSS v2.3.0", value: 3363, name: 'boss'},
-        {label: "LOOT v0.6.0", value:  1438, name: 'loot'},
-        {label: "LOOT v0.6.1", value:  2566, name: 'loot'},
-    ];
+import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
-    var parentWidth = document.getElementById('averageDailyDownloads').parentElement.offsetWidth;
+const data = [
+    {label: "BOSS v2.2.0", value: 3788, name: 'boss'},
+    {label: "LOOT v0.5.0", value: 1206, name: 'loot'},
+    {label: "BOSS v2.3.0", value: 3363, name: 'boss'},
+    {label: "LOOT v0.6.0", value:  1438, name: 'loot'},
+    {label: "LOOT v0.6.1", value:  2566, name: 'loot'},
+];
 
-    var margin = {top: 20, right: 30, bottom: 30, left: 50},
-        width = parentWidth - margin.left - margin.right,
-        height = 250 - margin.top - margin.bottom;
+const container = document.getElementById('averageDailyDownloadsChart');
+const containerWidth = container.offsetWidth;
 
-    var x = d3.scale.ordinal()
-        .domain(data.map(function(d) { return d.label; }))
-        .rangeRoundBands([0, width], .1);
+const margin = {top: 20, right: 30, bottom: 30, left: 50};
+const width = containerWidth - margin.left - margin.right;
+const height = 250 - margin.top - margin.bottom;
 
-    var y = d3.scale.linear()
-        .domain([0, d3.max(data, function(d) { return d.value; })])
-        .range([height, 0]);
+const x = d3.scaleBand()
+    .domain(data.map(d => d.label))
+    .rangeRound([0, width])
+    .padding(0.1);
 
-    var xAxis = d3.svg.axis()
-        .scale(x)
-        .orient("bottom");
+const y = d3.scaleLinear()
+    .domain([0, d3.max(data, d => d.value)])
+    .range([height, 0]);
 
-    var yAxis = d3.svg.axis()
-        .scale(y)
-        .orient("left");
+const svg = d3.create("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom);
 
-    var chart = d3.select("#averageDailyDownloads")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-      .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+const chart = svg.append("g")
+    .attr("transform", `translate(${margin.left},${margin.top})`);
 
-    chart.append("g")
-      .attr("class", "x axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(xAxis);
+chart.append("g")
+    .attr("class", "x axis")
+    .attr("transform", `translate(0,${height})`)
+    .call(d3.axisBottom(x));
 
-    chart.append("g")
-      .attr("class", "y axis")
-      .call(yAxis);
+chart.append("g")
+    .attr("class", "y axis")
+    .call(d3.axisLeft(y));
 
-    chart.selectAll(".bar")
-      .data(data)
-    .enter().append("rect")
-      .attr("class", function(d) { return 'bar ' + d.name;})
-      .attr("x", function(d) { return x(d.label); })
-      .attr("y", function(d) { return y(d.value); })
-      .attr("height", function(d) { return height - y(d.value); })
-      .attr("width", x.rangeBand());
-})();
+chart.append("g")
+    .selectAll()
+    .data(data)
+    .join("rect")
+    .attr("class", d => 'bar ' + d.name)
+    .attr("x", d => x(d.label))
+    .attr("y", d => y(d.value))
+    .attr("height", d => height - y(d.value))
+    .attr("width", x.bandwidth());
+
+container.append(svg.node());

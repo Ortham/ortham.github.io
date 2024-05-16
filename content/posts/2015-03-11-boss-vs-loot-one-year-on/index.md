@@ -6,8 +6,6 @@ categories:
    - LOOT
 aliases:
   - /2015/03/11/boss-vs-loot-one-year-on.html
-params:
-    d3: true
 ---
 
 LOOT's first release, v0.5.0, was made on the 31st of March, 2014. Almost one year on, I thought I'd take a look at some stats to see how it's performing against its predecessor, BOSS.
@@ -20,8 +18,8 @@ The release download numbers can be obtained using GitHub's Releases API, eg.
 
 #### Average Daily Download Rates
 
-<svg id="averageDailyDownloads" class="chart"></svg>
-<script src="scripts/download-rates.js"></script>
+<div id="averageDailyDownloadsChart"></div>
+<script type="module" src="scripts/download-rates.js"></script>
 
 These values are obtained by dividing total downloads by number of days since release. Actual download rates will decrease over time, but this merely a better representation of popularity than raw download numbers. The graph shows that BOSS's popularity is declining while LOOT's increases. I expect that LOOT's upcoming v0.7.0 release will outstrip BOSS for the first time.
 
@@ -31,17 +29,8 @@ Masterlist contributions are a useful metric because they give some insight into
 
 #### LOOT Masterlists Line Difference
 
-<svg id="commits" class="chart">
-    <g id="commits-legend" class="legend">
-        <rect class="bar positive loot" width="125" height="30"/>
-        <text dy=".71em" x="10" y="10">LOOT (2014-2015)</text>
-        <rect class="bar positive boss" width="125" height="30" y="30"/>
-        <text dy=".71em" x="10" y="40">BOSS (2014-2015)</text>
-        <rect class="bar positive boss-previous" width="125" height="30" y="60"/>
-        <text dy=".71em" x="10" y="70" style="fill:black">BOSS (2013-2014)</text>
-    </g>
-</svg>
-<script src="scripts/masterlist-lines.js"></script>
+<div id="commitsChart"></div>
+<script type="module" src="scripts/masterlist-lines.js"></script>
 
 The above graph shows the number of lines added or removed over the last two years. The scale is non-linear so that the BOSS 2013-2014 changes to the Skyrim masterlist don't make everything else too small to see.
 
@@ -66,8 +55,8 @@ LOOT masterlist repository clones are a useful metric as when LOOT initially dow
 
 #### Average Daily Clone Rate
 
-<svg id="averageDailyClones" class="chart"></svg>
-<script src="scripts/daily-clones.js"></script>
+<div id="averageDailyClonesChart"></div>
+<script type="module" src="scripts/daily-clones.js"></script>
 
 The graph above shows that Skyrim is (predictably) the game LOOT is most used for. The total number of clones per day comes out as ~ 2642, which is just slightly more than the number of downloads per day for LOOT's v0.6.1 release: this makes sense, since the majority of recent downloads will be of the latest release. The difference may be due to v0.7.0 beta downloads or outdated links to older versions.
 
