@@ -128,7 +128,7 @@ I made this together with Halo and HTF, it was my first major modding contributi
 
 Combines a robust custom weather system with the weathers from Atmospheric Weather System, Natural Weather and Enhanced Weather, adds exterior weather lighting, sounds and a day/night cycle to interiors, and replaces all fake lighting with real lights from visible sources.
 
-An ambitious mod, started by Chong Li and picked up by Arthmoor, Brumbek and myself, it pushed at the boundaries of Oblivion's capabilities, and I notice Skyrim has interior day/night cycles. `;)`
+An ambitious mod, started by Chong Li and picked up by Arthmoor, Brumbek and myself, it pushed at the boundaries of Oblivion's capabilities, and I notice Skyrim has interior day/night cycles. 😉
 
 ### Oblivion Graphics Extender
 
