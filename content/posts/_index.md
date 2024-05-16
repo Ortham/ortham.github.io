@@ -6,4 +6,5 @@ cascade:
     showDate: true
     showDateUpdated: true
     showReadingTime: true
+    showSummary: true
 ---
