@@ -38,4 +38,4 @@ There is also some sort of system they have with GitHub, where if you are a Flat
 
 I also considered [Gratipay](https://gratipay.com/) (formerly Gittip), but it's currently USA-only unless I want to practice my showjumping. Which is unfortunate, because it looks a lot more attractive as a service than Flattr.
 
-In addition to PayPal and Flattr, I will also soon be providing the option to donate [Bitcoins](https://bitcoin.org), but that'll be the subject of another post.
+In addition to PayPal and Flattr, I will also soon be providing the option to donate [Bitcoin](https://bitcoin.org), but that'll be the subject of another post.

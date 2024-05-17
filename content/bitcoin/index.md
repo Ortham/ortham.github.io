@@ -18,7 +18,7 @@ My Bitcoin address as a `bitcoin:` URI, QR code and plain text is available
 below.
 
 If you're interested in trying out Bitcoin, but don't know how to get started,
-my  [blog post]({{< ref "2014-09-12-donating-with-bitcoins" >}}) may be of
+my  [blog post]({{< ref "2014-09-12-donating-with-bitcoin" >}}) may be of
 interest to you.
 
 <p class="bitcoin">

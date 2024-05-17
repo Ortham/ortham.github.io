@@ -1,5 +1,5 @@
 ---
-title:  "Donating With Bitcoins"
+title:  "Donating With Bitcoin"
 date:   2014-09-12
 lastmod: 2014-09-13
 summary: "A guided adventure into the unknown."
@@ -21,9 +21,9 @@ Because all Bitcoin transactions occur openly, GreenAddress (like many other wal
 
 The confusion arises because it's not clear whether the per-transaction nature of the generates addresses is enforced, or suggested. Can I just choose to continue to use the last address generated, or will that cause funds to disappear into a black hole? I didn't know, so as the experimentalist I am, I decided to try it out and see what happened.
 
-### Buying Bitcoins
+### Buying Bitcoin
 
-The first hurdle was getting ahold of some bitcoins: there are few reputable exchanges out there that deal in the UK, and lots that at least look fairly dodgy. In the end, I chose to use [Bittylicious](https://bittylicious.com), which has a terribly unreassuring website and payment process, but it did have the advantage that I didn't need to supply my bank account details through their site.
+The first hurdle was getting ahold of some bitcoin: there are few reputable exchanges out there that deal in the UK, and lots that at least look fairly dodgy. In the end, I chose to use [Bittylicious](https://bittylicious.com), which has a terribly unreassuring website and payment process, but it did have the advantage that I didn't need to supply my bank account details through their site.
 
 Instead, the process is as follows:
 
@@ -32,13 +32,13 @@ Instead, the process is as follows:
 3. I log into my online banking account, and pay the amount to the seller with the given reference.
 4. They confirm payment receipt, and post some number that is the transaction ID (or something like that) on Bitcoin's system.
 
-I then check my wallet, and in under a minute I had a notification telling me that my funds had arrived. I now had 0.03 bitcoins (BTC)!
+I then check my wallet, and in under a minute I had a notification telling me that my funds had arrived. I now had 0.03 bitcoin (BTC)!
 
 ### Paying An Old Address
 
 I then went into GreenAddress's "Receive Money" tab, and copied the Bitcoin address there, then switched to another tab, and back again: the address shown the second time was different.
 
-After using the "Send Money" tab to transfer 0.06 mBTC (0.00006 bitcoins: the minimum allowed amount, roughly 2p) to the copied address, I got the notification, and saw in the "Transactions" tab that the payment had been recognised as "Re-deposited". Unfortunately, I was still charged the 0.1 mBTC transaction fee, so I basically just lost money for nothing. The payment worked, but I wasn't sure if it was just a special case.
+After using the "Send Money" tab to transfer 0.06 mBTC (0.00006 bitcoin: the minimum allowed amount, roughly 2p) to the copied address, I got the notification, and saw in the "Transactions" tab that the payment had been recognised as "Re-deposited". Unfortunately, I was still charged the 0.1 mBTC transaction fee, so I basically just lost money for nothing. The payment worked, but I wasn't sure if it was just a special case.
 
 Next, I set up a new account (you can have multiple accounts within your GreenAddress account), and tried to transfer between the two accounts, as I did before. This time, I could see that 0.16 mBTC was taken from my sending account, and 0.06 mBTC arrived in my receiving account.
 
@@ -50,7 +50,7 @@ Somewhat worrying was that for both transactions, I got an error message saying 
 
 They're everywhere. The GreenAddress service is pretty slick though --- if you're looking to try Bitcoin out, I'd definitely recommend it. One thing that stuck out like a sore thumb though was that Bitcoin addresses are styled like links, but clicking on them does nothing, and there's no option to copy them to the clipboard except higlighting + Ctrl-C. On a similar note, GreenAddress can also generate QR codes, but it doesn't offer you any way to save the images, so I had to take a screenshot, which seems like a pretty big oversight to me.
 
-### Bitcoins as a Donation Option
+### Bitcoin as a Donation Option
 
 #### Site Security
 
@@ -68,4 +68,4 @@ Just remember: be careful when dealing with money or other sensitive information
 
 #### My Bitcoin Address
 
-Anyway, my Bitcoin address as a `bitcoin:` URI, QR code and plain text can be found [here]({{< ref "bitcoin" >}}).
+Anyway, my Bitcoin address as a `bitcoin:` URI, QR code and plain text can be found [on this page]({{< ref "bitcoin" >}}).
