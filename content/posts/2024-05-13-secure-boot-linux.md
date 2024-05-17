@@ -1,7 +1,7 @@
 ---
 title: Replicating Bitlocker on Fedora 40
 date: 2024-05-13
-summary: A walkthrough of setting up a (mostly) working (roughly) equivalent to Bitlocker.
+summary: A walkthrough of setting up a (mostly) working (rough) equivalent to Bitlocker.
 categories:
    - Linux
    - Security
@@ -167,18 +167,6 @@ sudo bootctl
 
 The output should show `Secure Boot: enabled (user)` and `Measured UKI: yes`. You can also check if Secure Boot is enabled by running `mokutil --sb-state`.
 
-##### Tampering with MokManager?
-
-Given that signature verification failure results in the ability to enrol a new key, what's stopping an attacker from taking advantage of that by enrolling a key of their own that they used to sign a compromised UKI of their own?
-
-It is possible to set a password for MokManager by running `mokutil --password` from a terminal once you've booted and providing a password when prompted. If you do that, on next boot MokManager will prompt for that password and then allow you to set another password that it'll prompt for whenever you enter MokManager in the future.
-
-However, it's not clear to me where this password is stored: I assume that it's in the TPM, as I can't think where else would be safe at that point in the boot process. If that is the case, that's probably good enough: a compromised MokManager could bypass the password check, but MokManager is signed so that would need one of the distribution signing keys to be compromised too.
-
-There are other mitigations you can use to protect against this risk, as the MOK certificate is measured by the shim, which stores the measurement in PCR 14. More on that later.
-
-It's also worth noting that I'm assuming that the keys that Secure Boot trusts by default are trustworthy (it is possible to remove them, but I didn't investigate that), and that a UEFI password is set so that an attacker couldn't just enrol their own key and so have Secure Boot trust their compromised boot components signed with that key.
-
 #### Booting the UKI through systemd-boot
 
 Booting from shim to UKI isn't ideal as it means there's no way to choose between multiple UKIs (e.g. current and previous versions). To increase flexibility, you can introduce a bootloader, and `systemd-boot` is the simplest to use.
@@ -228,6 +216,18 @@ sudo systemctl reboot
 ```
 
 Once again, `sudo bootctl`'s output should show `Secure Boot: enabled (user)` and `Measured UKI: yes`.
+
+#### Tampering with MokManager?
+
+Given that signature verification failure results in the ability to enrol a new key, what's stopping an attacker from taking advantage of that by enrolling a key of their own that they used to sign a compromised UKI of their own?
+
+It is possible to set a password for MokManager by running `mokutil --password` from a terminal once you've booted and providing a password when prompted. If you do that, on next boot MokManager will prompt for that password and then allow you to set another password that it'll prompt for whenever you enter MokManager in the future.
+
+However, it's not clear to me where this password is stored: I assume that it's in the TPM, as I can't think where else would be safe at that point in the boot process. If that is the case, that's probably good enough: a compromised MokManager could bypass the password check, but MokManager is signed so that would need one of the distribution signing keys to be compromised too.
+
+There are other mitigations you can use to protect against this risk, as the MOK certificate is measured by the shim, which stores the measurement in PCR 14. More on that later.
+
+It's also worth noting that I'm assuming that the keys that Secure Boot trusts by default are trustworthy (it is possible to remove them, but I didn't investigate that), and that a UEFI password is set so that an attacker couldn't just enrol their own key and so have Secure Boot trust their compromised boot components signed with that key.
 
 ### Binding FDE unlock to TPM PCRs
 
