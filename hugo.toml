@@ -30,6 +30,9 @@ block = [['\[', '\]'], ['$$', '$$']]
 inline = [['\(', '\)']]
 
 # Congo theme settings
+[params]
+description = "A blog that is mostly related to my software projects."
+
 [params.author]
 name = "Oliver Hamlet"
 
