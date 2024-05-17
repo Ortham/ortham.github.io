@@ -16,7 +16,7 @@ The release download numbers can be obtained using GitHub's Releases API, eg.
 
 <script src="https://gist.github.com/Ortham/62888dd1228b6631c5f0.js"></script>
 
-#### Average Daily Download Rates
+### Average Daily Download Rates
 
 <div id="averageDailyDownloadsChart"></div>
 <script type="module" src="scripts/download-rates.js"></script>
@@ -27,7 +27,7 @@ These values are obtained by dividing total downloads by number of days since re
 
 Masterlist contributions are a useful metric because they give some insight into what people are interested in and value, given that contributing requires effort and is not particularly fun. I could have gotten the data using GitHub's [Statistics API](https://developer.github.com/v3/repos/statistics/), but I counted them manually using the graphs available for each repository ([example](https://github.com/loot/skyrim/graphs/contributors?from=2014-03-11&to=2015-03-11&type=c)).
 
-#### LOOT Masterlists Line Difference
+### LOOT Masterlists Line Difference
 
 <div id="commitsChart"></div>
 <script type="module" src="scripts/masterlist-lines.js"></script>
@@ -53,7 +53,7 @@ These results make sense:
 
 LOOT masterlist repository clones are a useful metric as when LOOT initially downloads a game's masterlist, it does so via a Git clone operation, so there's a strong correlation between new users and clones. Unfortunately, BOSS bundles its masterlist repositories in its releases to speed up the first run, but this means that there is no initial clone and so the clone rate data for the BOSS repositories can't be used for comparison. All data was obtained through the repository traffic graphs ([example](https://github.com/loot/skyrim/graphs/traffic)).
 
-#### Average Daily Clone Rate
+### Average Daily Clone Rate
 
 <div id="averageDailyClonesChart"></div>
 <script type="module" src="scripts/daily-clones.js"></script>
@@ -66,7 +66,7 @@ Oblivion's relatively low clone rate will be due to a combination of the communi
 
 Here are some stats on what is in the masterlists at time of writing. The LOOT stats were obtained by temporarily adding counters to the [Masterlist Search](https://loot.github.io/search) page (which uses GitHub APIs), and the BOSS plugin stats were obtained by counting via regex searches the instances of `^[^:\r\n]+$` and `MOD:` present in the masterlist files.
 
-#### LOOT
+### LOOT
 
 Masterlist         | Size (kb) | Lines  | Plugins | Sorting %
 -------------------|-----------|--------|---------|----------
@@ -75,7 +75,7 @@ Skyrim             | 1,617     | 36,437 | 4,484   | 6.8
 Fallout 3          | 137       | 4,730  | 913     | 2.3
 Fallout: New Vegas | 121       | 4,419  | 913     | 6.8
 
-#### BOSS
+### BOSS
 
 Masterlist         | Size (kb) | Lines  | Plugins
 -------------------|-----------|--------|--------

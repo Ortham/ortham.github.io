@@ -11,7 +11,7 @@ aliases:
 
 [Bitcoin](https://bitcoin.org) is something that's been in tech news a fair bit over the last year and a bit, for good and bad reasons. It is interesting though, so I thought I'd see what all the fuss is about, and add another donation option at the same time.
 
-### Getting Started
+## Getting Started
 
 I found the official site to be the most cautious, which is nice to see. Plenty of stress on the risks involved, whereas some of the other sites and articles I looked up tried to sell it as simpler than breathing and more secure than one-time pads. It's obviously neither of those.
 
@@ -21,7 +21,7 @@ Because all Bitcoin transactions occur openly, GreenAddress (like many other wal
 
 The confusion arises because it's not clear whether the per-transaction nature of the generates addresses is enforced, or suggested. Can I just choose to continue to use the last address generated, or will that cause funds to disappear into a black hole? I didn't know, so as the experimentalist I am, I decided to try it out and see what happened.
 
-### Buying Bitcoin
+## Buying Bitcoin
 
 The first hurdle was getting ahold of some bitcoin: there are few reputable exchanges out there that deal in the UK, and lots that at least look fairly dodgy. In the end, I chose to use [Bittylicious](https://bittylicious.com), which has a terribly unreassuring website and payment process, but it did have the advantage that I didn't need to supply my bank account details through their site.
 
@@ -34,7 +34,7 @@ Instead, the process is as follows:
 
 I then check my wallet, and in under a minute I had a notification telling me that my funds had arrived. I now had 0.03 bitcoin (BTC)!
 
-### Paying An Old Address
+## Paying An Old Address
 
 I then went into GreenAddress's "Receive Money" tab, and copied the Bitcoin address there, then switched to another tab, and back again: the address shown the second time was different.
 
@@ -46,13 +46,13 @@ The conclusion to that little experiment is therefore that although GreenAddress
 
 Somewhat worrying was that for both transactions, I got an error message saying that the Electrum network wasn't reachable, so there would be less assurance for the payment. Still, everything went smoothly, so maybe that's not such an issue.
 
-### Rough Edges
+## Rough Edges
 
 They're everywhere. The GreenAddress service is pretty slick though --- if you're looking to try Bitcoin out, I'd definitely recommend it. One thing that stuck out like a sore thumb though was that Bitcoin addresses are styled like links, but clicking on them does nothing, and there's no option to copy them to the clipboard except higlighting + Ctrl-C. On a similar note, GreenAddress can also generate QR codes, but it doesn't offer you any way to save the images, so I had to take a screenshot, which seems like a pretty big oversight to me.
 
-### Bitcoin as a Donation Option
+## Bitcoin as a Donation Option
 
-#### Site Security
+### Site Security
 
 One thing that's very important but not really touched on when discussing payment is that if you pay money to the wrong address, you'll never see it again unless you can persuade the actual recipient to repay you. "But Bitcoin addresses are long enough that you'll be copy/pasting them", I hear you say!
 
@@ -66,6 +66,6 @@ This is an unfortunate problem that's not unique to Bitcoin though: anything on 
 
 Just remember: be careful when dealing with money or other sensitive information on the Internet, and only trust it if you're connected to the page over HTTPS, ie. if there's a green lock in your browser's address bar. Though if you have been MitM'ed, I'd expect that this message has also been removed...
 
-#### My Bitcoin Address
+### My Bitcoin Address
 
 Anyway, my Bitcoin address as a `bitcoin:` URI, QR code and plain text can be found [on this page]({{< ref "bitcoin" >}}).

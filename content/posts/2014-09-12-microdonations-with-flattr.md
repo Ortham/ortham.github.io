@@ -10,7 +10,7 @@ aliases:
 
 Continuing with the theme introduced in [Improving Donation Visibility]({{< ref "2014-09-12-improving-donation-visibility" >}}), I have signed up to [Flattr](https://flattr.com), and will be offering it as a donation option alongside PayPal.
 
-### The Problem with PayPal
+## The Problem with PayPal
 
 In one sentence: the payment page looks rough, and the process is counter intuitive.
 
@@ -24,7 +24,7 @@ These questions should even come up, but that's what we ran into when my mum hea
 
 Still, for making small payments internationally or outside the United States, PayPal doesn't have much serious competition.
 
-### Why Flattr?
+## Why Flattr?
 
 It's a relatively popular platform for microdonations. If you're someone who wants to give money to lots of different individuals or organisations on a regular basis without going over budget, Flattr looks like a very attractive option. You basically put some money in a bucket, give that bucket to Flattr, and they'll divide it up between all the people who you mark as wanting to donate to that month (which they call "Flattring" them).
 
@@ -34,7 +34,7 @@ Still, Flattr does give that extra option for people who prefer it to PayPal, so
 
 There is also some sort of system they have with GitHub, where if you are a Flattr user and you star a repository of mine on GitHub, that will mark me as a Flattr recipient for that month. It probably won't for LOOT's repositories though, because they're "owned" by an organisation account.
 
-### Other Donation Options
+## Other Donation Options
 
 I also considered [Gratipay](https://gratipay.com/) (formerly Gittip), but it's currently USA-only unless I want to practice my showjumping. Which is unfortunate, because it looks a lot more attractive as a service than Flattr.
 
