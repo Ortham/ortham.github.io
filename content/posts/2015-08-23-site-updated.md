@@ -12,7 +12,7 @@ This site is now based off Pixyll v2.3!
 
 ## Forking, Not Overwriting
 
-Previously, the site was based off Pixyll 1.0, as detailed [here]({{< ref "2014-09-11-new-site" >}}). This was done just by adding the Pixyll files to this site's repository, but this made it difficult to incorporate new changes made in Pixyll. As I made my own tweaks to the site, these would conflict with Pixyll's changes, and because the repository contained no Pixyll history, I couldn't do a merge or rebase and only resolve the new conflicts. Instead I had to drag in a new release's files and resolve a much larger set of conflicts.
+The site was [previously]({{< ref "2014-09-11-new-site" >}}) based on Pixyll 1.0 by adding the Pixyll files to this site's repository, but this made it difficult to incorporate new changes made in Pixyll. As I made my own tweaks to the site, these would conflict with Pixyll's changes, and because the repository contained no Pixyll history, I couldn't do a merge or rebase and only resolve the new conflicts. Instead I had to drag in a new release's files and resolve a much larger set of conflicts.
 
 For the update to v2.3, I instead removed the initial commit adding the original Pixyll files, and rebased on top of the Pixyll `2.3.0` tagged commit. Now my site is effectively a fork of Pixyll, and that makes it much easier to
 

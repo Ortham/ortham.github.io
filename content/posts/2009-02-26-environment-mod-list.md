@@ -72,7 +72,7 @@ All Natural can be regarded as the 'FCOM' of environment mods, as it combines a 
 
 All Natural also includes support for the Shivering Isles. This consists of a weather system that highlights the split dual natures of the Isles, and expands the weather types available with around 60 new weathers from Enhanced Weather. The Natural Interiors concept has also been extended to cover the Isles, supplying a greater atmosphere within the interiors there.
 
-The original mod was created by Chong Li, and can be found  [here](https://www.nexusmods.com/oblivion/mods/16490). It was however abandoned at version 0.6, and since then Arthmoor and I have updated it, with the texturing and modelling done by Brumbek, and as the latest version contains everything the previous versions did, but with more features and bug fixes, it is recommended over older versions. All Natural requires [OBSE](https://obse.silverlock.org/) v18 and [Wrye Bash](https://www.nexusmods.com/oblivion/mods/22368) to run. Highly recommended is [Immersive Interiors](https://www.nexusmods.com/oblivion/mods/34199), which expands upon All Natural's interior effects, allowing you to see surrounding buildings and streets out of the windows of interiors in cities, though it is unfinished.
+The [original mod](https://www.nexusmods.com/oblivion/mods/16490) was created by Chong Li. It was however abandoned at version 0.6, and since then Arthmoor and I have updated it, with the texturing and modelling done by Brumbek, and as the latest version contains everything the previous versions did, but with more features and bug fixes, it is recommended over older versions. All Natural requires [OBSE](https://obse.silverlock.org/) v18 and [Wrye Bash](https://www.nexusmods.com/oblivion/mods/22368) to run. Highly recommended is [Immersive Interiors](https://www.nexusmods.com/oblivion/mods/34199), which expands upon All Natural's interior effects, allowing you to see surrounding buildings and streets out of the windows of interiors in cities, though it is unfinished.
 
 ### Rainbows In Tamriel
 
@@ -140,7 +140,7 @@ Due to the performance hit this mod carries, it is recommended to use the Animat
 
 [Nexus Mods](https://www.nexusmods.com/oblivion/mods/7055)
 
-Created as an alternative to IW, this does the same thing, but looks very different as it uses different textures and does not have any schedule system. Because of this, it also has less of a performance hit, but the AWLSaC is still recommended instead. If you choose to use this, make sure to grab the fix  [here](https://www.nexusmods.com/oblivion/mods/7060) too.
+Created as an alternative to IW, this does the same thing, but looks very different as it uses different textures and does not have any schedule system. Because of this, it also has less of a performance hit, but the AWLSaC is still recommended instead. If you choose to use this, make sure to grab [the fix](https://www.nexusmods.com/oblivion/mods/7060) too.
 
 ### Animated Window Lighting System and Chimneys (AWLSaC)
 

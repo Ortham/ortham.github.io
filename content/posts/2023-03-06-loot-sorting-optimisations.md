@@ -434,7 +434,7 @@ That's the new tie-breaking logic! It's certainly more complicated than the brut
 
 There were a couple of choices that have a performance impact: the first is to search for a pinning position going backwards from the end of the load order, and the second is to search for the last plugin that a plugin *can* load after. If you were to search forwards from the start of the load order, or search for the last plugin that a plugin *must* load after, you'd end up looking for a lot more back-paths, which is significantly slower.
 
-I'm not going to include the full optimised code inline, because it's about 250 lines long, but about 100 lines of that are comments, and 35 lines are logging: it can be found [here](https://github.com/loot/libloot/blob/0.19.2/src/api/sorting/plugin_graph.cpp#L1055-L1307) if you're interested.
+I'm not going to include the [full optimised code](https://github.com/loot/libloot/blob/0.19.2/src/api/sorting/plugin_graph.cpp#L1055-L1307) inline, because it's about 250 lines long, but about 100 lines of that are comments, and 35 lines are logging.
 
 As a result of this optimisation, one user with 2313 plugins saw their sorting time go from 2184 seconds to 162 seconds!
 
@@ -550,7 +550,7 @@ It's implemented generically as there are other parts of the codebase that can a
 
 This significantly improved performance, but now most of the time was spent in the mapper function (specifically the `PluginItem` constructor). I couldn't see an easy way to speed up what the constructor was doing, but luckily calling the constructor is thread-safe, so I can do the mapping in parallel!
 
-Going parallel did make the code more complicated, mostly because you're not allowed to throw exceptions when using STL parallelism, and so I used `std::variant<T, std::string>` as an intermediate representing the result or the error string for each mapping, and then had to process that collection of results. The `MapFromLoadOrderData()` function doubled in length so is a bit too long to include inline, but you can find it [here](https://github.com/loot/loot/blob/0.19.0/src/gui/state/game/game.h#L141-L231) if you're interested. I saw a 4x performance improvement in `PluginItem` creation with this change, on an Intel Core i5-8400 (a 6-core CPU with no [SMT](https://en.wikipedia.org/wiki/Simultaneous_multithreading)).
+Going parallel did make the code more complicated, mostly because you're not allowed to throw exceptions when using STL parallelism, and so I used `std::variant<T, std::string>` as an intermediate representing the result or the error string for each mapping, and then had to process that collection of results. The `MapFromLoadOrderData()` function [doubled in length](https://github.com/loot/loot/blob/0.19.0/src/gui/state/game/game.h#L141-L231) so is a bit too long to include inline. I saw a 4x performance improvement in `PluginItem` creation with this change, on an Intel Core i5-8400 (a 6-core CPU with no [SMT](https://en.wikipedia.org/wiki/Simultaneous_multithreading)).
 
 After these changes, the user for whom the UI refresh took 88s saw it take 0.53s, and the user for whom it took 53s saw it take 0.34s (they both had 8-core CPUs with SMT). The core sorting algorithm was once again the the slowest part of the sorting process.
 

@@ -604,7 +604,7 @@ fn main() {
 }
 ```
 
-Here I've used three different structs to define the different states, but you can also use a single struct that is generic over a state type. It involves a few concepts I haven't mentioned yet, but you can see an example [here](https://gist.github.com/Ortham/e8942d622d91e2e87a3c5b7f6545d745).
+Here I've used three different structs to define the different states, but you can also use a single struct that is generic over a state type. It involves a few concepts I haven't mentioned yet, but if you're interested I've written [an example](https://gist.github.com/Ortham/e8942d622d91e2e87a3c5b7f6545d745) of that approach.
 
 This pattern is a little less useful in languages that lack affine or linear type systems, which is what prevents us from opening the closed door twice in the example above. Move semantics aren't enough, as C++ still allows you to access the original. Even so, using typestates reduces the opportunities to introduce logic bugs in all sorts of situations. For example, it would be great if Node.js used them to prevent code from trying to set response headers after they've already been sent, instead of throwing an exception at runtime.
 

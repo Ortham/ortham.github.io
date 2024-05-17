@@ -109,8 +109,9 @@ Example](https://doc.rust-lang.org/stable/rust-by-example/) useful for providing
 examples of how to do common things in Rust, especially as I found it difficult
 to write idiomatic Rust without covering a lot of the language first. There are
 also several more domain-specific guides available, e.g. for FFI, embedded and
-WebAssembly. There's a big list of resources
-[here](https://github.com/ctjhoa/rust-learning), but I haven't used most of them.
+WebAssembly. I found a
+[big list of resources](https://github.com/ctjhoa/rust-learning), but I haven't
+used most of them, so can't comment on their quality.
 
 People who learn Rust talk of "fighting the borrow checker", and I did my fair
 bit, but the errors that the compiler throws at you are usually easy to

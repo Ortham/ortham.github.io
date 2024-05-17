@@ -33,9 +33,9 @@ Linux distributions tend to rely on a shim EFI executable to simplify using Linu
 
 The shim requires that the EFI executable it launches is signed by a certificate that is trusted by UEFI or by the shim itself: the shim has an embedded database of distro-specific certificates. Those embedded certificates allow Linux distributions to supply bootloaders, Linux kernels, etc. that they sign instead of Microsoft.
 
-A lot more information about the use of Secure Boot and the shim in Linux can be found [here](https://www.rodsbooks.com/efi-bootloaders/secureboot.html).
+A lot more information about the use of Secure Boot and the shim in Linux can be found [on rodsbooks.com](https://www.rodsbooks.com/efi-bootloaders/secureboot.html).
 
-Secure Boot only covers the boot process up to launching the bootloader, and only cares about the signatures of EFI executables: other data files are out of scope. In Windows, something called Trusted Boot takes over once Secure Boot has allowed the bootloader to launch, by verifying the signatures of the Windows kernel and other components of the Windows boot process. There's also something called Measured Boot that records measurements of the whole boot process. There's a good overview of how the Windows boot process is secured [here](https://learn.microsoft.com/en-us/windows/security/operating-system-security/system-security/secure-the-windows-10-boot-process).
+Secure Boot only covers the boot process up to launching the bootloader, and only cares about the signatures of EFI executables: other data files are out of scope. In Windows, something called Trusted Boot takes over once Secure Boot has allowed the bootloader to launch, by verifying the signatures of the Windows kernel and other components of the Windows boot process. There's also something called Measured Boot that records measurements of the whole boot process. Microsoft provide [a good overview](https://learn.microsoft.com/en-us/windows/security/operating-system-security/system-security/secure-the-windows-10-boot-process) of how these features are used together to secure the Windows boot process.
 
 ### Full disk encryption (FDE)
 
@@ -233,7 +233,7 @@ Once again, `sudo bootctl`'s output should show `Secure Boot: enabled (user)` an
 
 Now that Secure Boot using a UKI is set up, you can configure FDE decryption to use TPM + PIN and bind it to TPM PCRs so that the TPM only allows access to the encryption key if the correct PIN is provided and the TPM PCRs have their expected values.
 
-The standard PCRs and those used by Linux are documented [here](https://uapi-group.org/specifications/specs/linux_tpm_pcr_registry/). Those of interest to me are:
+The standard PCRs and those used by Linux are [documented](https://uapi-group.org/specifications/specs/linux_tpm_pcr_registry/) by the UAPI Group. Those of interest to me are:
 
 - 7 (Secure Boot)
 - 11 (all components of UKIs)
