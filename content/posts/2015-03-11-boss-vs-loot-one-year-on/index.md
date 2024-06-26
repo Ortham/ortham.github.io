@@ -14,7 +14,23 @@ LOOT's first release, v0.5.0, was made on the 31st of March, 2014. Almost one ye
 
 The release download numbers can be obtained using GitHub's Releases API, eg.
 
-<script src="https://gist.github.com/Ortham/62888dd1228b6631c5f0.js"></script>
+```js
+//Get the total number of downloads for a single release, using its tag name.
+function releaseDownloadCount(owner, repo, tag) {
+    const url = `https://api.github.com/repos/${owner}/${repo}/releases`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(releases => releases.find(release => release.tag_name === tag))
+        .then(release => release
+            .assets
+            .reduce((previous, next) => previous + next.download_count, 0))
+        .then(console.log);
+}
+
+// Use LOOT as an example.
+releaseDownloadCount('loot', 'loot', '0.18.3');
+```
 
 ### Average Daily Download Rates
 
