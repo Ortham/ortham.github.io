@@ -6,8 +6,6 @@ categories:
    - LOOT
 aliases:
   - /2015/05/23/loot-v0.7-sorting.html
-params:
-  mathjax: true
 ---
 LOOT v0.7.0 has finally been released, after just over a year and 1000 commits made in development. Given that so much has changed, I thought I'd write a couple of posts giving a little insight into the major changes, what I learned and the decisions I made.
 
@@ -78,7 +76,19 @@ Now, LOOT v0.7 *does* produce slightly different load orders, but that's because
 
 This isn't really particularly relevant to the above, but is a neat topic on which to finish this post. Sorting a load order of *N* plugins with v0.7 produces a graph with *M* edges, where
 
-$$ M = \frac{N}{2} (N - 1) $$
+<math display="block">
+  <mi>M</mi>
+  <mo>=</mo>
+  <mfrac>
+    <mi>N</mi>
+    <mn>2</mn>
+  </mfrac>
+  <mo>(</mo>
+  <mi>N</mi>
+  <mo>&#x2212;</mo>
+  <mn>1</mn>
+  <mo>)</mo>
+</math>
 
 as there is an edge between every pair of plugins. This means that my Skyrim load order, which contains 48 plugins, produces a graph with 1,128 edges. Most edges are duplicates or otherwise equivalent to other combinations of edges that describe the same path, but it's more efficient just to add all these extra edges than to check if an edge is needed before adding it.
 

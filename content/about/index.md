@@ -41,8 +41,7 @@ free time.
 The site is generated using [Hugo](https://gohugo.io/), uses the
 [Congo](https://github.com/jpanther/congo) theme, and is hosted on
 [GitHub](https://github.com/Ortham/Ortham.github.io). Parts of it also use
-[D3](https://d3js.org/), [Mermaid](https://mermaid.js.org/) and
-[MathJax](https://www.mathjax.org/).
+[D3](https://d3js.org/) and [Mermaid](https://mermaid.js.org/).
 
 Site content is copyright Oliver Hamlet under the
 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.

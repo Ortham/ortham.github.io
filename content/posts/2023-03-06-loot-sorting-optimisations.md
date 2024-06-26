@@ -6,8 +6,6 @@ categories:
    - LOOT
 aliases:
   - /2023/03/07/loot-sorting-optimisations.html
-params:
-  mathjax: true
 ---
 
 
@@ -267,7 +265,7 @@ The `ComparePlugins()` function compares the plugins' existing load order indexe
 
 The logic in `AddTieBreakEdges()` has been effectively unchanged since LOOT v0.7.0, released in 2015. While simple, this approach scales *terribly*:
 
-* It's \( O(N^2) \) with the number of plugins. To give an idea of what that means, I found that LOOT v0.18.6 sorted 1619 plugins in 1186 seconds, and 1114 seconds of that was just spent tie-breaking.
+* It's <math><mi>O</mi><mo>(</mo><msup><mi>N</mi><mn>2</mn></msup><mo>)</mo></math> with the number of plugins. To give an idea of what that means, I found that LOOT v0.18.6 sorted 1619 plugins in 1186 seconds, and 1114 seconds of that was just spent tie-breaking.
 * The `PathExists()` call gets slower as more edges are added to the graph (it's a wrapper around the `FindPath()` function shown earlier), and the point of this method is to try to add an edge between every pair of plugins, so as it runs it gets slower and slower.
 
   For example, one user had a graph of 1200 plugins and 95970 edges before tie-breaking, which then took 393 seconds to add another 11133 edges. They then added all of those plugins to groups and re-ran sorting. This time the graph had 685007 edges before tie-breaking, which then took 1800 seconds to add another 10747 edges.
@@ -276,7 +274,7 @@ This is one of those cases where doing the same thing more efficiently wasn't go
 
 > I'm going to be using [big O notation](https://en.wikipedia.org/wiki/Big_O_notation) to refer to how algorithms scale with their input. Unless otherwise noted, N refers to the number of plugins.
 >
-> If you're unfamiliar with big O notation, \( O(N) \) means that the running time of the function increases linearly with the number of plugins, so doubling the number of plugins approximately doubles the running time, and \( O(N^2) \) means that the running time increases quadratically, so doubling the number of plugins would approximately quadruple the running time.
+> If you're unfamiliar with big O notation, <math><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></math> means that the running time of the function increases linearly with the number of plugins, so doubling the number of plugins approximately doubles the running time, and <math><mi>O</mi><mo>(</mo><msup><mi>N</mi><mn>2</mn></msup><mo>)</mo></math> means that the running time increases quadratically, so doubling the number of plugins would approximately quadruple the running time.
 >
 > I'm using the notation a little loosely, ignoring what actually happens inside loops, because that level of precision gets a lot more complicated and isn't necessary to explain the optimisations.
 
@@ -329,7 +327,7 @@ flowchart TB
     C --> D
 ```
 
-That's much better: it's not adding unnecessary edges, and iterating over the desired Hamiltonian path is \( O(N) \), so it'll scale much more efficiently.
+That's much better: it's not adding unnecessary edges, and iterating over the desired Hamiltonian path is <math><mi>O</mi><mo>(</mo><mi>N</mi><mo>)</mo></math>, so it'll scale much more efficiently.
 
 The code for that would look something like this:
 
@@ -483,7 +481,7 @@ std::optional<short> Game::GetActiveLoadOrderIndex(
 It's going through the load order looking for the given plugin and counting the number of active plugins before then. This isn't ideal for two reasons:
 
 1. As mentioned earlier, comparing filenames is relatively slow.
-2. Because this function is called for every plugin, it means there are \( O(N^2) \) checks against each plugin.
+2. Because this function is called for every plugin, it means there are <math><mi>O</mi><mo>(</mo><msup><mi>N</mi><mn>2</mn></msup><mo>)</mo></math> checks against each plugin.
 
 Given that I also need the `PluginInterface` pointers returned by `GetPlugin()` to construct the `PluginItem` objects, it's much faster to map the load order to a sequence of `(PluginInterface, load order index)` pairs, as then the counting of active plugins is only done once and there's no need for filename comparisons. I implemented it like this:
 
@@ -562,7 +560,7 @@ Master flag edges are added going from each master-flagged plugin to all non-mas
 
 Instead of having a single graph containing all plugins and enforcing the master flag rule within that graph, I split the graph into one containing master-flagged plugins and another containing non-master-flagged plugins. They are sorted separately and the sorted load order from the non-master plugin graph is appended to the sorted load order from the master plugin graph to give the full sorted load order.
 
-This eliminated the need for master flag edges and so sped up path searches. Reducing the number of plugins in each graph also improved performance for code that scaled quadratically: given a load order with M masters and N non-masters, an \( O((M + N)^2) \) loop is slower than an \( O(M^2) \) loop followed by an \( O(N^2) \) loop.
+This eliminated the need for master flag edges and so sped up path searches. Reducing the number of plugins in each graph also improved performance for code that scaled quadratically: given a load order with M masters and N non-masters, an <math><mi>O</mi><mo>(</mo><msup><mrow><mo>(</mo><mi>M</mi><mo>+</mo><mi>N</mi><mo>)</mo></mrow><mn>2</mn></msup><mo>)</mo></math> loop is slower than an <math><mi>O</mi><mo>(</mo><msup><mi>M</mi><mn>2</mn></msup><mo>)</mo></math> loop followed by an <math><mi>O</mi><mo>(</mo><msup><mi>N</mi><mn>2</mn></msup><mo>)</mo></math> loop.
 
 Splitting the plugin graph in two does have one downside, in that the topological sort of the two graphs will no longer error when there's metadata that tries to load a non-master before a master. This is because any one graph can only include one of those plugins, and any rules that involve plugins that are not in the graph get skipped.
 
