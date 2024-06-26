@@ -1,5 +1,3 @@
-import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
-
 const data = [
     {label: "BOSS v2.2.0", value: 3788, name: 'boss'},
     {label: "LOOT v0.5.0", value: 1206, name: 'loot'},

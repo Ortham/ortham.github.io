@@ -6,6 +6,8 @@ categories:
    - LOOT
 aliases:
   - /2015/03/11/boss-vs-loot-one-year-on.html
+params:
+  d3: true
 ---
 
 LOOT's first release, v0.5.0, was made on the 31st of March, 2014. Almost one year on, I thought I'd take a look at some stats to see how it's performing against its predecessor, BOSS.
