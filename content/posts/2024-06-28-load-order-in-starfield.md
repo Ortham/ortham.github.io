@@ -179,7 +179,7 @@ Load order in Starfield is largely similar to how it works in Skyrim Special Edi
   The value of `<language>` is derived from Steam's game settings for Steam installs. It's apparently derived from Windows' preferred language settings for Microsoft Store installs, but I was unable to replicate that when I had a copy of Starfield through Game Pass.
 - Starfield doesn't just load plugins from `<game install path>\Data`: if there's a plugin in `My Games\Starfield\Data` with the same filename as a plugin in `<game install path>\Data`, the plugin under `My Games` will be loaded. This only happens if the same filename is present in both folders though: if there's a plugin that's only present under `My Games`, it won't get loaded.
 - Any plugins that are active but have no defined load order position (e.g. because they're implicitly active or activated using `sTestFile<N>` and aren't otherwise constrained) are appended to the load order in order of ascending file modification timestamp (so more-recently-modified plugins load later). Unlike all previous games, if two plugins loaded this way have the same timestamp, they're loaded in *ascending* filename order, not descending filename order.
-- Unlike previous games, Starfield makes changes `Plugins.txt` when it loads:
+- Unlike previous games, Starfield makes changes to `Plugins.txt` when it loads:
   - Plugins listed in `Starfield.ccc` are inserted at the top of `Plugins.txt`, before any plugins already listed there.
   - After plugins are loaded, any implicitly active plugins that are also listed in `Plugins.txt` will be removed from that file. This happens after any plugins in `Starfield.ccc` are inserted into `Plugins.txt`.
 
