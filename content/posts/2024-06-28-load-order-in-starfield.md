@@ -168,7 +168,7 @@ An obvious knock-on effect of this is that if a plugin is saved with a master an
 
 ## Load order
 
-Load order in Skyrim is largely similar to how it works in Skyrim Special Edition and Fallout 4, but there are a few new behaviours.
+Load order in Starfield is largely similar to how it works in Skyrim Special Edition and Fallout 4, but there are a few new behaviours.
 
 - Starfield has no plugins that are hardcoded to always be active and in specific positions in the load order, but all of the official plugins are hardcoded to always be active (I refer to such plugins as being implicitly active): they are `Starfield.esm`, `Constellation.esm`, `OldMars.esm`, `BlueprintShips-Starfield.esm`, `SFBGS003.esm`, `SFBGS006.esm`, `SFBGS007.esm` and `SFBGS008.esm`.
 - Although Starfield doesn't come with a `Starfield.ccc`, it's possible to create one and plugins listed there will be loaded as active plugins in the order they're listed, before any plugins listed in `Plugins.txt`. New to Starfield is that it will load `Starfield.ccc` from `My Games\Starfield\Starfield.ccc` if that file exists, and otherwise it will try to load it from the game's install directory (i.e. the same folder that `Starfield.exe` is found in).
