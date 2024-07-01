@@ -36,8 +36,10 @@ A medium plugin is similar to a light plugin in that they allow multiple plugins
 
 | Plugin type | Max number of active plugins | Max number of records per plugin |
 |-------------|------------------------------|----------------------------------|
-| Light       |                         4096 |                             4096 |
+| Light       |                         4096 |                             4095 |
 | Medium      |                          256 |                            65535 |
+
+(I've not included the plugin's `TES4` header in the max number of records, since it's not usually counted as one, but it technically is a record with a FormID of `00000000`.)
 
 New records added by medium plugins are loaded with FormIDs that look like `FDxxyyyy`, where `xx` is the medium-plugin-specific load order index (so the first active medium plugin is given `00`, the second `01`, etc. even if there are other non-medium plugins between them), and `yyyy` is the object index of the record that was added by the plugin.
 
