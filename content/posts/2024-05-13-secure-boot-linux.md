@@ -309,7 +309,7 @@ sudo ukify build \
 
 Note the two new `--pcr-private-key` and `--pcr-public-key` parameters passed to `ukify`.
 
-On boot, if systemd sees that the UKI contains these signed PCR values and public key, it will copy them to files under `/run/systemd/`. `systemd-cryptenroll`'s default behaviour is to look for these files and if it finds them it will attempt to validate the signatures. It may be possible to disable that functionality by passing `--tpm2-public-key-pcrs=""` to `systemd-cryptenroll` as the default value is `11`, but I didn't test that.
+Once the UKI has been rebuilt, re-run `systemd-cryptenroll` to update the binding to also check the UKI's embedded signatures. You don't need to supply any additional parameters, as they're used to check PCR 11 by default: pass `--tpm2-public-key-pcrs=""` to `systemd-cryptenroll` to disable that behaviour.
 
 Unfortunately I wasn't able to get PCR 11 validation to succeed. The boot log contained:
 
