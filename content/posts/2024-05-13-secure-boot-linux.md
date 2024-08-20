@@ -333,7 +333,11 @@ To make `kernel-install` run `ukify`, create a configuration file at `/etc/kerne
 
 ```conf
 layout=uki
+uki_generator=ukify
+BOOT_ROOT=/boot/efi
 ```
+
+The `uki_generator` entry is needed to stop `/usr/lib/kernel/install.d/50-dracut.install` generating a a UKI using dracut (for some reason it thinks dracut is the default, even though the `kernel-install` man page says it's `ukify`). The `BOOT_ROOT` entry is to override the default value of `/boot` so that UKIs get installed in the correct location for `systemd-boot` to find them: that may be specific to how my boot and EFI partitions happen to be set up though.
 
 To configure `ukify` to create a signed UKI, create another configuration file at `/etc/kernel/uki.conf` containing:
 
@@ -345,87 +349,9 @@ SecureBootPrivateKey=/root/secure-boot.key
 SecureBootCertificate=/root/secure-boot.crt
 ```
 
-To fix the missing `.initrd` section in the UKIs that get created, you need to fix a script that treats an array variable as a string:
+With that config, every time a new kernel is installed, a corresponding signed UKI will also be generated and installed. Similarly, when a kernel is removed, its corresponding UKI will also be removed.
 
-```sh
-sed 's/"$UEFI_OPTS"/$UEFI_OPTS/' /usr/lib/kernel/install.d/50-dracut.install | sudo tee /etc/kernel/install.d/50-dracut.install > /dev/null
-sudo chmod +x /etc/kernel/install.d/50-dracut.install
-```
-
-This fixes the `dracut` call in that install script, so that the kernel version and output image path parameters are not ignored. Without that fix, `kernel-install` generates the `initramfs` at `/boot/efi/$KERNEL_INSTALL_MACHINE_ID$/$KERNEL_VERSION/initrd` when a kernel is installed using `dnf`, and at `/boot/initramfs-$KERNEL_VERSION.img` when `kernel-install add` is run manually.
-
-That's not quite enough, because the `initramfs` is then written to a different path than the one expected by `ukify`. To fix that, create a file at `/etc/kernel/install.d/51-uki-initrd.install` containing:
-
-```sh
-#!/usr/bin/sh
-
-set -e
-
-COMMAND="$1"
-KERNEL_VERSION="$2"
-BOOT_DIR_ABS="$3"
-
-if [[ -d "$BOOT_DIR_ABS" ]]; then
-	echo "$BOOT_DIR_ABS is a directory, unexpected!"
-	exit 0
-else
-	if [[ -d $BOOT_DIR_ABS ]]; then
-		IMAGE="initrd"
-	else
-		BOOT_DIR_ABS="/boot"
-		IMAGE="initramfs-${KERNEL_VERSION}.img"
-	fi
-fi
-
-BOOT_IMAGE_PATH="$BOOT_DIR_ABS/$IMAGE"
-UKIFY_IMAGE_PATH="$KERNEL_INSTALL_STAGING_AREA/initrd-${KERNEL_VERSION}.img"
-
-case "$COMMAND" in
-	add)
-		cp "$BOOT_IMAGE_PATH" "$UKIFY_IMAGE_PATH"
-		;;
-	remove)
-		rm -f -- "$UKIFY_IMAGE_PATH"
-		;;
-esac
-```
-
-The exact filename doesn't matter, it just needs to run after `50-dracut.install`. Then run `chmod +x /etc/kernel/install.d/51-uki-initrd.install` to enable use of the file.
-
-To fix the UKI file being written to the wrong place and so not being detected by `systemd-boot`, run:
-
-```sh
-sed 's|UKI_DIR="$BOOT_ROOT/EFI|UKI_DIR="$BOOT_ROOT/efi/EFI|' /usr/lib/kernel/install.d/90-uki-copy.install | sudo tee /etc/kernel/install.d/90-uki-copy.install > /dev/null
-sudo chmod +x /etc/kernel/install.d/90-uki-copy.install
-```
-
-Alternatively, create a file at `/etc/kernel/install.d/91-copy-uki.install` containing:
-
-```sh
-#!/usr/bin/sh
-
-set -e
-
-COMMAND="$1"
-KERNEL_VERSION="$2"
-
-ENTRY_TOKEN="$KERNEL_INSTALL_ENTRY_TOKEN"
-BOOT_ROOT="$KERNEL_INSTALL_BOOT_ROOT"
-UKI_PATH="$BOOT_ROOT/efi/EFI/Linux/$ENTRY_TOKEN-$KERNEL_VERSION.efi"
-
-case "$COMMAND" in
-	add)
-		install -m 0644 "$KERNEL_INSTALL_STAGING_AREA/uki.efi" "$UKI_PATH"
-		;;
-	remove)
-		rm -f -- "$UKI_PATH"
-		;;
-esac
-```
-
-Then `chmod +x /etc/kernel/install.d/91-copy-uki.install`. Again, the exact filename doesn't matter, it just needs to run after `90-uki-copy.install`.
-
-With all this done, every time a new kernel is installed, a corresponding signed UKI will also be generated and installed. Similarly, when a kernel is removed, its corresponding UKI will also be removed.
+I also created a file at `/etc/kernel/entry-token` containing `fedora` because otherwise my machine ID (a 32-character hexadecimal ID) was used to name the UKIs.
 
 #### Generating UKIs using dracut
 
