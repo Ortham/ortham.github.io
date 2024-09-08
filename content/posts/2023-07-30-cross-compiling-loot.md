@@ -30,7 +30,7 @@ When installing Ubuntu, I chose the minimal install option, to download updates 
 
 With Ubuntu freshly installed, I then ran:
 
-```
+```sh
 sudo apt-get update && sudo apt-get upgrade -y
 ```
 
@@ -40,7 +40,7 @@ to make sure the base install was up to date.
 
 Cross-compiling is done using the [MinGW-w64](https://www.mingw-w64.org/) runtime environment. Ubuntu 20.04 includes an older version in its APT repositories, based on GCC 9.3, and that might be fine to use, but I built everything from source using [MXE](https://mxe.cc/):
 
-```
+```sh
 sudo apt-get install -y autoconf automake autopoint bash bison bzip2 flex g++ \
     g++-multilib gettext git gperf intltool libc6-dev-i386 libgdk-pixbuf2.0-dev \
     libltdl-dev libgl-dev libpcre3-dev libtool-bin libssl-dev libxml-parser-perl \
@@ -68,7 +68,7 @@ The build takes a long time (1 hour 45 minutes in my VM) and builds more than LO
 
 Once built, add the new MinGW-w64 binaries to `PATH`:
 
-```
+```sh
 export PATH="$PATH:$HOME/Downloads/mxe/usr/bin"
 ```
 
@@ -76,7 +76,7 @@ export PATH="$PATH:$HOME/Downloads/mxe/usr/bin"
 
 libloot uses some [Rust](https://www.rust-lang.org/) libraries, so we also need to install the Rust toolchain and set it up for cross-compilation, and install cbindgen (which is used to generate C++ header files for the libraries).
 
-```
+```sh
 wget -q -O - https://sh.rustup.rs | sh
 source $HOME/.cargo/env
 rustup target add x86_64-pc-windows-gnu
@@ -102,7 +102,7 @@ set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
 
 Then clone the libloot Git repository and build libloot:
 
-```
+```sh
 cd ~/Downloads
 git clone https://github.com/loot/libloot.git
 cd libloot
@@ -124,7 +124,7 @@ libloot commits older than [58b96c9](https://github.com/loot/libloot/commit/58b9
 
 Building LOOT will need its icon file created, so download svg_to_ico:
 
-```
+```sh
 cd ~/Downloads
 wget https://github.com/Ortham/svg_to_ico/releases/download/1.1.0/svg_to_ico.tar.xz
 tar -xJf svg_to_ico.tar.xz
@@ -133,7 +133,7 @@ rm svg_to_ico.tar.xz README.md
 
 Then clone the LOOT Git repository and build LOOT:
 
-```
+```sh
 cd ~/Downloads
 git clone https://github.com/loot/loot.git
 cd loot
@@ -156,7 +156,7 @@ LOOT commits older than [dfda129](https://github.com/loot/loot/commit/dfda129a12
 
 The build will fail when compiling OGDF. When this happens, fix it and continue the build like so:
 
-```
+```sh
 sed -i 's/Psapi.h/psapi.h/' external/src/OGDF/src/ogdf/basic/System.cpp
 
 x86_64-w64-mingw32.static-cmake --build .
@@ -170,7 +170,7 @@ We need to install Wine to run LOOT, but the version of Wine that's in Ubuntu 20
 
 Instead, install Wine from Wine HQ's repository:
 
-```
+```sh
 sudo mkdir -pm755 /etc/apt/keyrings
 sudo wget -O /etc/apt/keyrings/winehq-archive.key \
     https://dl.winehq.org/wine-builds/winehq.key
@@ -182,6 +182,6 @@ sudo apt-get install -y --install-recommends winehq-stable
 
 At time of writing, that installs Wine 8.0.2. LOOT can then be run like so:
 
-```
+```s
 wine64 ~/Downloads/loot/build/LOOT.exe
 ```

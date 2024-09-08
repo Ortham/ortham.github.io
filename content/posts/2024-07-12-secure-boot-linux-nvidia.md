@@ -65,7 +65,10 @@ To trigger signing, I had to remove the Nvidia driver and reinstall it, but it w
 
 ```sh
 sudo dnf remove \*nvidia\* --exclude nvidia-gpu-firmware
-sudo dnf install akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-libs xorg-x11-drv-nvidia-libs.i686
+sudo dnf install akmod-nvidia \
+   xorg-x11-drv-nvidia \
+   xorg-x11-drv-nvidia-libs \
+   xorg-x11-drv-nvidia-libs.i686
 sudo akmods --force
 ```
 
