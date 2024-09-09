@@ -1,6 +1,7 @@
 ---
 title: Cross-compiling LOOT
 date: 2023-07-30
+lastmod: 2026-04-03
 summary: For Windows, from Linux.
 categories:
    - LOOT
@@ -69,7 +70,7 @@ The build takes a long time (1 hour 45 minutes in my VM) and builds more than LO
 Once built, add the new MinGW-w64 binaries to `PATH`:
 
 ```sh
-export PATH="$PATH:$HOME/Downloads/mxe/usr/bin"
+export PATH="$HOME/Downloads/mxe/usr/bin:$PATH"
 ```
 
 ## Building libloot
