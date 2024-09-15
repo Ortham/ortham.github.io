@@ -78,7 +78,9 @@ After that finished I was able to verify that the module was now signed by runni
 
 I've already covered how to generate UKIs and bind LUKS decryption to TPM + PIN with PCRs in my [previous blog post]({{< ref "2024-05-13-secure-boot-linux" >}}), so I'll only mention a few things specific to running on real hardware:
 
-- I had to add `nomodeset` to `/etc/kernel/cmdline` before generating the UKI to avoid getting a black screen on boot again. I forgot to do that, and `systemd-boot` doesn't let you edit kernel parameters while Secure Boot is enabled, so recovering from that involved jumping through a few extra hoops.
+- I had to disable kernel mode setting (KMS) to avoid getting a black screen on boot. I forgot to do that before generating the UKI, and `systemd-boot` doesn't let you edit kernel parameters while Secure Boot is enabled, so recovering from that involved jumping through a few extra hoops.
+
+  I initially saw success by adding `nomodeset` to `/etc/kernel/cmdline`, but after more experimentation I found that the issue only occurred when the "iGPU Multi-Monitor" setting in my motherboard's BIOS was enabled (the motherboard is an ASRock Z370M-ITX/ac). Disabling that setting means that my iGPU isn't available at the same time as my graphics card, so I didn't want to do that, but it gave me the idea of trying to disable KMS for just the iGPU. I removed the `nomodeset` parameter and added `i915.modeset=0` and found that also worked.
 - My LUKS configuration changes (done using `systemd-cryptenroll`) to bind disk decryption to TPM + PIN and PCRs 7, 12, 13 and 14 had no effect until I added `tpm2-device=auto` to the volume's options in `/etc/crypttab`.
 - I did try binding LUKS to TPM PCR 11 via a certificate, but validation failed with the same boot errors logged as when I attempted it in a Hyper-V VM. My fTPM (provided by my Intel Core i5-8400 CPU) only has `sha1` and `sha256` banks, so I configured `systemd-cryptenroll` just to check the sha256 bank for PCR 11 (using `--tpm2-public-key-pcrs="11:sha256"`) but that didn't resolve the issue.
 
