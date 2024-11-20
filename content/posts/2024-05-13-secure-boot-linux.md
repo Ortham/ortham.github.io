@@ -80,7 +80,7 @@ That's all the background, so here's what needs to be done:
 6. Bind full disk encryption to Secure Boot and other relevant TPM PCRs.
 7. Set up automatic generation of UKIs on kernel updates.
 
-The steps below were carried out on Fedora 40, starting from a fresh install that set up FDE with a passphrase. I've also got a separate section further down covering the differences when running Fedora Atomic 40 (e.g. Silverblue, Kinoite).
+The steps below were carried out on Fedora 40, starting from a fresh install that set up FDE with a passphrase.
 
 The Linux install was done in a Hyper-V VM on Windows 10 Pro: real hardware (like a discrete Nvidia graphics card) may introduce some additional complications. I tried to install Fedora to dual-boot it, but the Fedora installer didn't like me having Windows partitions on the same disk.
 
@@ -391,54 +391,6 @@ sudo cryptsetup luksDump /dev/sda3
 ```
 
 where `/dev/sda3` is the partition holding the LUKS volume.
-
-## Fedora Atomic
-
-Things are a little different in Fedora Atomic (e.g. Silverblue, Kinoite).
-
-### Unified Kernel Images in Fedora Atomic
-
-Unfortunately Fedora Atomic [does not support](https://github.com/ostreedev/ostree/issues/1719) `systemd-boot`, so you need to use GRUB instead.
-
-The process for generating a UKI is very similar to that described earlier, except:
-
-- the kernel and initramfs both live in subdirectories of `/boot/ostree`, not in `/boot`, so their paths need adjusting wherever they appear in `ukify` calls.
-- the `--cmdline @/etc/kernel/cmdline` parameter needs to be replaced with `--cmdline $(rpm-ostree kargs)` to avoid an error relating to being unable to mount to `/sysroot` on boot, as `/etc/kernel/cmdline` contains the wrong value.
-
-I didn't test automatically generating UKIs, but the `kernel-install` scripts are different:
-
-- The fix to `50-dracut.conf` is unnecessary.
-- All the other changes detailed above are still necessary.
-- You'll need to omit the `Cmdline` line from `/etc/kernel/uki.conf` since `/etc/kernel/cmdline` contains the wrong value.
-- Unfortunately, if you run `kernel-install` manually then its `60-ukify.install` script will use `/etc/kernel/cmdline`. It looks like automated runs won't be affected because `/etc/kernel/cmdline` isn't used if `KERNEL_INSTALL_CONF_ROOT` is defined.
-
-### TPM support in Fedora Atomic
-
-Before you can use `systemd-cryptenroll`, the `tpm2-tss` module needs to be added to dracut's configuration. This can be done by creating a file at `/etc/dracut.conf.d/tpm2-tss.conf` (the filename doesn't matter) containing:
-
-```conf
-add_dracutmodules+=" tpm2-tss "
-```
-
-Fedora Atomic doesn't generate an initramfs locally by default, so that config won't have any effect until you run:
-
-```sh
-sudo rpm-ostree initramfs --enable
-```
-
-I also edited the content of `/etc/crypttab` to become:
-
-```
-luks-<UUID> UUID=<UUID> - tpm2-device=auto,discard
-```
-
-Where `<UUID>` is the UUID that's already present in the file. After I edited that file I regenerated the initramfs using:
-
-```sh
-sudo rpm-ostree initramfs-etc --force-sync
-```
-
-I'm not entirely sure that the `crypttab` edit was necessary, but Fedora Atomic doesn't enable TRIM on encrypted SSDs by default because it can leak information like (I think) the size of deleted files. If you don't care about that, enabling TRIM is a good idea, and that's what `discard` does.
 
 ## Other resources
 
