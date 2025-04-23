@@ -4,6 +4,8 @@ date: 2025-01-22
 summary: A big quality-of-life improvement for some users.
 categories:
    - LOOT
+aliases:
+  - 2025-loot-group-sorting
 ---
 
 [LOOT](https://loot.github.io/) is a utility that helps people use game mods for Bethesda's Elder Scrolls and Fallout games. Mods for these games use plugin files to make changes to game data, and LOOT's main feature is sorting the order in which these plugins are loaded by the game to help avoid compatibility issues.

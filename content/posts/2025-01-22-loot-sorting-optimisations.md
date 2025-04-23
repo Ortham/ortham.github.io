@@ -12,7 +12,7 @@ It's been a couple of years since the [last significant optimisations]({{< ref "
 
 Back in 2023, I managed to make changes that I saw give a performance improvement of 39x, and others (with larger load orders) reported it being up to 246x faster. This time I've only seen a 2x improvement, as a result of a series of small improvements adding up. All the changes were made in [libloot](https://github.com/loot/libloot), the library that provides LOOT's core functionality. The changes haven't been released yet, but you can see the commits in [this comparison view](https://github.com/loot/libloot/compare/7abfc66f8c05176c192e1359a017b6e6bd55a9fc...794e796de829782f07e373021e944bb9e0d1a421).
 
-2023's improvements were motivated by LOOT being unusably slow for people with very large load orders. This time around I started looking for optimisation opportunities because I've implemented a [new approach to handling plugin groups during sorting]({{< ref "2025-loot-group-sorting" >}}) that is a bit slower than the old approach, and I wanted to offset that before merging the change.
+2023's improvements were motivated by LOOT being unusably slow for people with very large load orders. This time around I started looking for optimisation opportunities because I've implemented a [new approach to handling plugin groups during sorting]({{< ref "2025-01-22-loot-group-sorting" >}}) that is a bit slower than the old approach, and I wanted to offset that before merging the change.
 
 When deciding what to focus on and measuring the impact of individual changes, I ran the Visual Studio profiler on a test function that looked like this:
 
