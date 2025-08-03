@@ -311,8 +311,7 @@ Like the C++ API, the Rust API is documented using source code comments. They ar
 
 I'm no expert, but I think one of the problems is that Sphinxcontrib-rust has to do its own parsing because rustdoc only produces HTML output, unless you use the unstable `--output-format json` option (fully: `cargo +nightly rustdoc -- -Z unstable-options --output-format json`). If that ever gets stabilised then it might allow Sphinxcontrib-rust to match rustdoc's output.
 
-It's not ideal to have the reference and long-form documentation split like this, but given how easy it is to generate the docs for a Rust library and how standardised Rust API reference docs are, I think it's a reasonable approach. If in the future libloot gets published to [crates.io](https://crates.io/), the Sphinx docs might then also link to the docs on [docs.rs](https://docs.rs/).
-
+It's not ideal to have the reference and long-form documentation split like this, but given how easy it is to generate the docs for a Rust library and how standardised Rust API reference docs are, I think it's a reasonable approach. The docs for future releases of libloot will also link to the [docs on docs.rs](https://docs.rs/libloot/latest/libloot/).
 
 ## Increased memory usage 😢
 
