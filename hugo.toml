@@ -3,7 +3,8 @@ languageCode = 'en-GB'
 title = "Ortham's Software Notes"
 theme = "congo"
 
-paginate = 10
+[pagination]
+pagerSize = 10
 
 [[menus.main]]
 name = "Posts"
