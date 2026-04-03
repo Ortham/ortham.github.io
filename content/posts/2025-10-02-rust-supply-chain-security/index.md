@@ -1,6 +1,7 @@
 ---
 title: Improving my Rust projects' supply chain security
 date: 2025-10-02
+lastmod: 2026-04-03
 summary: Trying to be a responsible ecosystem participant.
 ---
 
@@ -189,7 +190,7 @@ rust-lang/crates-io-auth-action@e919bc7605cde86df457cf5b93c5e103838bd879 # v1.0.
 
 I'm putting the version tag as a comment because otherwise it's not obvious which version the hash corresponds to.
 
-Pinning the hashes means I don't automatically get updates, so I've also configured Dependabot to open pull requests for updates to Actions. I'm not sure if it'll pin those updates, and it will probably remove the comments, but it should at least be useful for notifying me of updates.
+Pinning the hashes means I don't automatically get updates, so I've also configured Dependabot to open pull requests for updates to Actions. It updates the hash and the comment, [here](https://github.com/loot/loot-condition-interpreter/pull/83/files) is an example.
 
 ### Passing `--locked`, `--git` and `--rev` when running `cargo install` in CI
 
