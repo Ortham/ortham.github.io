@@ -1,6 +1,7 @@
 ---
 title: "Load order in Starfield, part 2: blueprint plugins"
 date: 2024-07-30
+lastmod: 2026-04-03
 summary: Another new type of plugin!
 categories:
   - modding
@@ -16,7 +17,7 @@ If a plugin has the `0x800` header flag set, then it won't be visible in the Cre
 
 I've therefore taken to calling the `0x800` flag the *blueprint flag*, and a plugin that has the blueprint flag set is a *blueprint plugin*.
 
-As well as being hidden from view in the Creation Kit, blueprint plugins are removed from `Plugins.txt` when the game loads a save.
+As well as being hidden from view in the Creation Kit, blueprint plugins are removed from `Plugins.txt` when Starfield starts.
 
 There is one official blueprint plugin: `BlueprintShips-Starfield.esm`.
 
