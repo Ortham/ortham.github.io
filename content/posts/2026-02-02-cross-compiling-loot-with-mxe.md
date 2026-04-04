@@ -1,6 +1,7 @@
 ---
 title: Cross-compiling LOOT with dev containers
 date: 2026-02-07
+lastmod: 2026-04-04
 summary: With shared or static linking, and building LOOT's installer.
 categories:
    - LOOT
@@ -377,7 +378,7 @@ COPY install_inno_setup.sh /home/vscode/
 ENV PATH="$PATH:/opt/powershell-7.5.4-linux-x64"
 ```
 
-PowerShell is installed because LOOT has a PowerShell script that needs to be run before building the installer. The script downloads or generates a few files for the installer to package (e.g. the latest masterlists, so you have masterlists if you install LOOT on a computer without internet access).
+PowerShell is installed because LOOT has a PowerShell script that needs to be run before building the installer. The script downloads or generates a few files for the installer to package (e.g. the latest masterlists, so you have masterlists if you install LOOT on a computer without internet access). That script needed some minor changes to work on Linux (e.g. to path concatenation).
 
 The `install_inno_setup.sh` script looks like this:
 
@@ -391,7 +392,7 @@ set -e
 WINEDLLOVERRIDES="mscoree=;mshtml=;" wine msiexec \
     -i /home/vscode/wine-mono-7.4.0-x86.msi /quiet /qn
 
-# Install Inno Setup to "C:/Program Files (x86)/Inno Setup 6" in the Wine 
+# Install Inno Setup to "C:/Program Files (x86)/Inno Setup 6" in the Wine
 # prefix. This fails if there is no display, even though it doesn't display
 # anything.
 wine /home/vscode/innosetup-6.7.0.exe /VERYSILENT /ALLUSERS /SUPPRESSMSGBOXES
@@ -408,6 +409,12 @@ and to run it on startup, the following is added to `devcontainer.json`:
 Finally, because the installer is packaging a cross-compiled build of LOOT, it had to be updated to include the MinGW runtime DLLs:
 
 ```
+#if FileExists(AddBackslash(SourcePath) + '..\build\Release\LOOT.exe')
+#define ArtifactsDir "build\Release"
+#else
+#define ArtifactsDir "build"
+#endif
+
 #if FileExists(AddBackslash(SourcePath) + '..\' + AddBackslash(ArtifactsDir) + 'libstdc++-6.dll')
 
 Source: "{#ArtifactsDir}\libgcc_s_seh-1.dll"; \
@@ -422,6 +429,8 @@ DestDir: "{app}"; Flags: ignoreversion
 #endif
 ```
 
+The installer was also updated to use `ArtifactsDir` for the source paths of all the LOOT and Qt binaries that the installer packages, since the MinGW builds do not use build configuration subdirectories like MSVC does.
+
 With all that, once LOOT is built, creating the installer is a matter of running:
 
 ```sh
@@ -431,6 +440,78 @@ pwsh ./scripts/prepare_installer.ps1
 
 wine "C:/Program Files (x86)/Inno Setup 6/ISCC.exe" scripts/installer.iss
 ```
+
+## Running the tests is slow
+
+Building and running the tests is made possible by the `set(CMAKE_CROSSCOMPILING_EMULATOR wine)` line in the CMake toolchain file, which tells CMake and CTest to run the built test executable using Wine. You can also do this manually, but the build fails without `CMAKE_CROSSCOMPILING_EMULATOR`, because CMake uses its `gtest_discover_tests()` function to discover what tests exist for CTest to run, and that works by running the test executable with a flag to get it to output a list of its tests.
+
+With that in place, I found that I had to increase `gtest_discover_tests()`'s timeout from the default of 5 seconds to 10 seconds.
+
+It's not just test discovery that's impacted though. I timed running a single test:
+
+| Run                 | Running time / ms |
+|---------------------|-------------------|
+| Native              | 19                |
+| Native using CTest  | 42                |
+| Windows             | 1271              |
+| Windows using CTest | 5130              |
+
+So running a native test through CTest is 2x slower than running it directly, running a cross-compiled test through CTest and Wine is 4x slower than running it just through Wine, and running a test through Wine is 67x slower than running it natively.
+
+The specific test I ran just tests the equality operator for a struct consisting of a couple of enums and a string, it shouldn't involve any platform-specific code and does everything in memory, so the amount of work done should be similar in native and Windows builds.
+
+Across the whole test suite, the slowdown really adds up. When running all tests (1302 for Linux, 1343 for Windows):
+
+| Run                            | Running time / seconds |
+|--------------------------------|------------------------|
+| Native                         | 2                      |
+| Native using CTest             | 21                     |
+| Native using CTest (parallel)  | 2                      |
+| Windows                        | 46                     |
+| Windows using CTest            | 7010                   |
+| Windows using CTest (parallel) | 157                    |
+
+This shows that CTest is 10x slower for native tests and 152x slower for tests run through Wine.
+
+- For the native tests, running them all through CTest is close to how long it would take to run all the tests through individual invocations of the test executable, so it looks like there is no per-test CTest overhead.
+- For the Windows tests, running them all through Wine and CTest is close to how long it would take to run all the tests through individual invocations of CTest.
+
+In both cases, it's much more efficient to run the all the tests by avoiding CTest and running the test executable just once. Aside from the CTest overhead:
+
+- for the native tests, it's 10x faster to run the executable once than individually for each test
+- for the Windows tests, it's 37x faster to run the executable once than individually for each test.
+
+The silver lining for CTest is that it can be used to run the tests in parallel, though for native builds it's only as fast as running the executable directly, and for the Windows tests it's still ~ 3x slower.
+
+I measured the times above by running the following commands, recording the real times reported:
+
+```sh
+# Native, single test
+time ./loot_gui_tests \
+   --gtest_color=no \
+   --gtest_filter=SourcedMessage.equalityOperatorShouldReturnTrueIfAllFieldsAreEqual
+
+# Windows, single test
+time wine loot_gui_tests.exe \
+   --gtest_color=no \
+   --gtest_filter=SourcedMessage.equalityOperatorShouldReturnTrueIfAllFieldsAreEqual
+
+# CTest, single test, same for native and Windows builds
+time ctest -R SourcedMessage.equalityOperatorShouldReturnTrueIfAllFieldsAreEqual
+
+# Native, all tests
+time ./loot_gui_tests --gtest_brief=1 --gtest_color=no
+
+# Windows, all tests
+time wine loot_gui_tests.exe --gtest_brief=1 --gtest_color=no
+
+# CTest, all tests, same for native and Windows builds
+time ctest --quiet
+
+# CTest parallel, all tests, same for native and Windows builds
+time ctest --quiet
+```
+
 
 ## Running LOOT
 
